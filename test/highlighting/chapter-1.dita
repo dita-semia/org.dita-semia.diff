@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topic xmlns:cba="http://www.dita-semia.org/conbat" xmlns:xcr="http://www.dita-semia.org/xslt-conref" xmlns:ikd="http://www.dita-semia.org/implicit-keydef"
+	xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" id="gtq_m22_sbb">
+	<title>Chapter One</title>
+	<body>
+		<p id="GFH-422-SBB">Text Text Text</p>
+		<p id="HPG-YP4-HDB">xref: <xref href="#gtq_m22_sbb" format="dita">Link Text <b>bold</b> <ph rev="dsd:added">added</ph><ph rev="dsd:deleted">deleted</ph></xref>, <xref href="#gtq_m22_sbb"
+			format="dita" rev="dsd:added">Link added</xref>, <xref href="#gtq_m22_sbb" format="dita" rev="dsd:deleted">Link deleted</xref></p>
+		<fig id="XNF-HCF-LDB">
+			<title>Image</title>
+			<image href="dita-logo.png" width="160mm" id="LBY-3CF-LDB" rev="dsd:added"/>
+			<image href="dita-logo.png" width="160mm" rev="dsd:deleted" id="SQ3-4DF-LDB"/>
+		</fig>
+		<p id="NND-RDF-LDB"><image href="dita-logo.png" width="160mm" rev="dsd:added" id="T3K-SDF-LDB"/><image href="dita-logo.png" width="160mm" rev="dsd:deleted" id="U3K-SDF-LDB"/></p>
+	</body>
+</topic>

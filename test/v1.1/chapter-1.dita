@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topic xmlns:cba="http://www.dita-semia.org/conbat" xmlns:xcr="http://www.dita-semia.org/xslt-conref" xmlns:ikd="http://www.dita-semia.org/implicit-keydef"
+	xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" id="xyz_m22_sbb">
+	<title>Chapter One</title>
+	<body>
+		<p id="GFH-422-SBB">Text Text Text</p>
+		<p id="U5P-SN2-SBB">New content</p>
+		<section id="ZVJ-Q4N-HDB">
+			<title>Fixed Link Target</title>
+			<p id="AWJ-Q4N-HDB">Some more Text to increase the size of this node so it is less likely to be moved.</p>
+		</section>
+		<section id="ETH-P4N-HDB">
+			<title>Moved Link Target</title>
+			<p id="FTH-P4N-HDB">Some Text.</p>
+		</section>
+	</body>
+</topic>

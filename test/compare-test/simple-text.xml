@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Pure text content
+-->
+<root>
+	<curr>
+		<p>1 2222 333 4 6666</p>
+	</curr>
+	<prev>
+		<p>2222 1 4 333 6667</p>
+	</prev>
+	<result>
+		<p><ph class="- topic/ph " rev="dsd:added">1 </ph>2222 <ph class="- topic/ph " rev="dsd:deleted">1 4 </ph>333 <ph class="- topic/ph " rev="dsd:added">4 6666</ph><ph class="- topic/ph " rev="dsd:deleted">6667</ph></p>
+	</result>
+</root>
+

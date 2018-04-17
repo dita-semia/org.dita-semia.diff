@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Same as test 1 but without ids
+-->
+<root>
+	<curr>
+		<body>
+			<p>1</p>
+			<p>2222</p>
+			<p>333</p>
+			<p>4</p>
+		</body>
+	</curr>
+	<prev>
+		<body>
+			<p>2222</p>
+			<p>1</p>
+			<p>4</p>
+			<p>333</p>
+		</body>
+	</prev>
+	<result>
+		<body>
+			<p rev="dsd:added">1</p>
+			<p>2222</p>
+			<p rev="dsd:deleted">1</p>
+			<p rev="dsd:deleted">4</p>
+			<p>333</p>
+			<p rev="dsd:added">4</p>
+		</body>
+	</result>
+</root>
+

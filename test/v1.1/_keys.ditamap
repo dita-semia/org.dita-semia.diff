@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:map.xsd">
+	<keydef keys="VersionNumber">
+		<topicmeta>
+			<keywords>
+				<keyword>1.1</keyword>
+			</keywords>
+		</topicmeta>
+	</keydef>
+</map>

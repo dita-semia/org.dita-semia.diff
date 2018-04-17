@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+
+	<target name="dita2dita-semia.diff.normalize" depends="dita-semia.preprocess.diff.init">
+		
+		<!-- set some properties -->
+		<if>
+			<not>
+				<isset property="dita-semia.diff.normalize.xsl"/>
+			</not>
+			<then>
+				<property name="dita-semia.diff.normalize.xsl" value="${dita.plugin.org.dita-semia.diff.dir}/xsl/normalize.xsl"/>
+			</then>
+		</if>
+		<if>
+			<not>
+				<isset property="dita-semia.diff-nrm.tmp-uri-suffix"/>
+			</not>
+			<then>
+				<property name="dita-semia.diff-nrm.tmp-uri-suffix" value=".diff-nrm-tmp.xml"/>
+			</then>
+		</if>
+		<if>
+			<not>
+				<isset property="dita-semia.diff.filterNoise"/>
+			</not>
+			<then>
+				<property name="dita-semia.diff.filterNoise" value="false"/>
+			</then>
+		</if>
+
+		
+		<!-- normalize -->
+		<java 
+				classname		= "net.sf.saxon.Transform"
+				classpathref	= "dita-semia.diff.saxon.classpath"
+				fork			= "true"
+				failonerror		= "true">
+			<arg value="-s:${dita.temp.dir}${file.separator}${user.input.file}"/>
+			<arg value="-o:${dita.temp.dir}${file.separator}${user.input.file}${dita-semia.diff-nrm.tmp-uri-suffix}"/>
+			<arg value="-xsl:${dita-semia.diff.normalize.xsl}"/>
+			<arg value="-config:${dita.plugin.org.dita-semia.diff.dir}/saxon-config.xml"/>
+			<arg value="tmpUriSuffix=${dita-semia.diff-nrm.tmp-uri-suffix}"/>
+			<arg value="filterNoise=${dita-semia.diff.filterNoise}"/>
+		</java>
+		
+		
+		<!-- overwrite original files by generated ones -->
+		<move-tmp file="${dita.temp.dir}/${user.input.file}" tmp-suffix="${dita-semia.diff-nrm.tmp-uri-suffix}"/>
+		<loadfile property="topic-list" srcFile="${dita.temp.dir}/${fullditatopicfile}"/>
+		<if>
+			<isset property="topic-list"/>
+			<then>
+				<for list="${topic-list}" delimiter="${line.separator}" param="file">
+					<sequential>
+						<move-tmp file="${dita.temp.dir}/@{file}" tmp-suffix="${dita-semia.diff-nrm.tmp-uri-suffix}"/>
+					</sequential>
+				</for>
+			</then>
+		</if>
+		
+		
+		<!--<move file="${dita.temp.dir}/${user.input.file}${dita-semia.diff.tmp-uri-suffix}" tofile="${dita.temp.dir}/${user.input.file}" overwrite="yes"/>
+		<loadfile property="topic-list" srcFile="${dita.temp.dir}/${fullditatopicfile}"/>
+		<if>
+			<isset property="topic-list"/>
+			<then>
+				<for list="${topic-list}" delimiter="${line.separator}" param="filename">
+					<sequential>
+						<var name="tmp-filename" value="${dita.temp.dir}/@{filename}${dita-semia.diff.tmp-uri-suffix}"/>
+						<if>
+							<available file="${tmp-filename}"/>
+							<then>
+								<move file="${tmp-filename}" tofile="${dita.temp.dir}/@{filename}" overwrite="yes"/>
+							</then>
+						</if>
+					</sequential>
+				</for>
+			</then>
+		</if>-->
+		
+	</target>
+	
+
+</project>

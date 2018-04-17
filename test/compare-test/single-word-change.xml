@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	single word change
+-->
+<root>
+	<curr>
+		<p>TextZText</p>
+	</curr>
+	<prev>
+		<p>TextXText</p>
+	</prev>
+	<result>
+		<p>Text<ph class="- topic/ph " rev="dsd:added">Z</ph><ph class="- topic/ph " rev="dsd:deleted">X</ph>Text</p>
+	</result>
+</root>
+

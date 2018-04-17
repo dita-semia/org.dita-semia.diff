@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	changed wrapping in inline content
+-->
+<root>
+	<curr>
+		<p>111 <i>222 333 444 555</i> 666</p>
+	</curr>
+	<prev>
+		<p>111 <i>222</i> 333 <i>444 555</i> 666</p>
+	</prev>
+	<result>
+		<p>111 <i>222<ph class="- topic/ph " rev="dsd:added"> 333 </ph></i><ph class="- topic/ph " rev="dsd:deleted"> 333 </ph><i>444 555</i> 666</p>
+	</result>
+</root>
+

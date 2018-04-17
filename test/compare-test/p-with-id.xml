@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	All elements have ids
+-->
+<root>
+	<curr>
+		<body>
+			<?PI 1?>
+			<p id="1">1</p>
+			<?PI 2?>
+			<p id="2">2222</p>
+			<?PI 3?>
+			<p id="3">333</p>
+			<?PI 4?>
+			<p id="4">4</p>
+			<?PI 5?>
+		</body>
+	</curr>
+	<prev>
+		<body>
+			<p id="2">2222</p>
+			<p id="1">1</p>
+			<p id="4">4</p>
+			<p id="3">333</p>
+		</body>
+	</prev>
+	<result>
+		<body>
+			<?PI 1?>
+			<p id="1" rev="dsd:added">1</p>
+			<?PI 2?>
+			<p id="2">2222</p>
+			<?PI 3?>
+			<p id="1" rev="dsd:deleted">1</p>
+			<p id="4" rev="dsd:deleted">4</p>
+			<p id="3">333</p>
+			<?PI 4?>
+			<p id="4" rev="dsd:added">4</p>
+			<?PI 5?>
+		</body>
+	</result>
+</root>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	mutiple nested inline elements 
+-->
+<root>
+	<curr>
+		<p>111 <i>222 333 <b>444</b> 555</i> 666</p>
+	</curr>
+	<prev>
+		<p>111 <i>22 <b>444</b></i> 666</p>
+	</prev>
+	<result>
+		<p>111 <i><ph class="- topic/ph " rev="dsd:added">222 333</ph><ph class="- topic/ph " rev="dsd:deleted">22</ph> <b>444</b><ph class="- topic/ph " rev="dsd:added"> 555</ph></i> 666</p>
+	</result>
+</root>
+

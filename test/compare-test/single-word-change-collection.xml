@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	single word changes
+-->
+<root>
+	<curr>
+		<body>
+			<p id="1">Text identical content changed</p>
+			<p id="2">Text</p>
+			<p id="3">Text</p>
+			<p id="4">Text</p>
+			<p id="5">Same <i>Text</i> Same</p>
+			<p id="6">Same <i>Same Text Same </i> Same</p>
+			<p id="7">Same <i>diff</i> Same</p>
+			<p id="8">Same <i><b>diff</b></i> Same</p>
+		</body>
+	</curr>
+	<prev>
+		<body>
+			<p id="1">Txt identical content chnged</p>
+			<p id="2">Textx</p>
+			<p id="3">Texttexttexttext</p>
+			<p id="4">Te_xt</p>
+			<p id="5">Same <i>Txt</i> Same</p>
+			<p id="6">Same <i>Same Txt Same </i> Same</p>
+			<p id="7">Same <b>dif</b> Same</p>
+			<p id="8">Same <i><u>diff</u></i> Same</p>
+		</body>
+	</prev>
+	<result>
+		<body>
+			<p id="1">T<ph class="- topic/ph " rev="dsd:added">e</ph>xt identical content ch<ph class="- topic/ph " rev="dsd:added">a</ph>nged</p>
+			<p id="2">Text<ph class="- topic/ph " rev="dsd:deleted">x</ph></p>
+			<p id="3">Text<ph class="- topic/ph " rev="dsd:deleted">texttexttext</ph></p>
+			<p id="4">Te<ph class="- topic/ph " rev="dsd:deleted">_</ph>xt</p>
+			<p id="5">Same <i><ph class="- topic/ph " rev="dsd:added">Text</ph><ph class="- topic/ph " rev="dsd:deleted">Txt</ph></i> Same</p>
+			<p id="6">Same <i>Same <ph class="- topic/ph " rev="dsd:added">Text</ph><ph class="- topic/ph " rev="dsd:deleted">Txt</ph> Same </i> Same</p>
+			<p id="7">Same <i rev="dsd:added">diff</i><b rev="dsd:deleted">dif</b> Same</p>
+			<p id="8">Same <i><b rev="dsd:added">diff</b><u rev="dsd:deleted">diff</u></i> Same</p>
+		</body>
+	</result>
+</root>
+

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	
+	<target name="dita-semia.preprocess.diff" depends="dita-semia.preprocess.diff.init">
+	
+		<echo message="dita-semia.diff-prev-url: ${dita-semia.diff-prev-url}"/>
+	
+		<if>
+			<isset property="dita-semia.diff-prev-url"/>
+			<then>
+				
+				<!-- set some properties -->
+				<if>
+					<not>
+						<isset property="dita-semia.diff.compare.xsl"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff.compare.xsl" value="${dita.plugin.org.dita-semia.diff.dir}/xsl/compare.xsl"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff-cmp.tmp-uri-suffix"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff-cmp.tmp-uri-suffix" value=".diff-cmp-tmp.xml"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff.del-topiclist-file"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff.del-topiclist-file" value="dsd-delditatopic.list"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff-cmp.text-change-wrapper"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff-cmp.text-change-wrapper" value="ph"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff-cmp.add-attr-name"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff-cmp.add-attr-name" value="rev"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff-cmp.add-attr-val"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff-cmp.add-attr-val" value="dsd:added"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff-cmp.del-attr-name"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff-cmp.del-attr-name" value="rev"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff-cmp.del-attr-val"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff-cmp.del-attr-val" value="dsd:deleted"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff.single-indent"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff.single-indent" value="&#x09;"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff-cmp.protect-text-match-size"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff-cmp.protect-text-match-size" value="30"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff-cmp.protect-text-match-ratio"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff-cmp.protect-text-match-ratio" value="0.3"/>
+					</then>
+				</if>
+				<if>
+					<not>
+						<isset property="dita-semia.diff.ditaval-to-xsl.xsl"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff.ditaval-to-xsl.xsl" value="${dita.plugin.org.dita-semia.diff.dir}/xsl/ditaval-to-xsl.xsl"/>
+					</then>
+				</if>
+				<property name="dita-semia.diff.root.filename.file" value="dita-semia.diff.root.filename.txt"/>
+				
+				
+				
+				<!-- normalize -->
+				<antcall target="dita2dita-semia.diff.normalize"/>
+				
+
+				<!-- unzip prev file -->
+				<property name="prev.temp.dir" value="${dita.temp.dir}${file.separator}dita-semia.diff-prev"/>
+				<propertyregex property="diff-prev-file" input="${dita-semia.diff-prev-url}" regexp="^file:" replace=""/>
+				<unzip src="${diff-prev-file}" dest="${prev.temp.dir}"/>
+
+				<loadfile property="dita-semia.diff.prev.root.filename" srcFile="${prev.temp.dir}${file.separator}${dita-semia.diff.root.filename.file}"/>
+				
+				<!-- filter previous file -->
+				<if>
+					<isset property="dita.input.valfile"/>
+					<then>
+						<echo>Filter previous version</echo>
+						<property name="dita-semia.diff-cmp.filter-prev-xsl" 	value="${prev.temp.dir}${file.separator}dita-semia-diff-filter.xsl"/>
+						<property name="dita-semia.diff-filter.tmp-uri-suffix" 	value=".diff-fltr-tmp.xml"/>
+						<java 
+								classname		="net.sf.saxon.Transform"
+								classpathref	= "dita-semia.diff.saxon.classpath"
+								fork			= "true"
+								failonerror		= "true">
+							<arg value="-s:${dita.input.valfile}"/>
+							<arg value="-xsl:${dita-semia.diff.ditaval-to-xsl.xsl}"/>
+							<arg value="-config:${dita.plugin.org.dita-semia.diff.dir}${file.separator}saxon-config.xml"/>
+							<arg value="xslFile=${dita-semia.diff-cmp.filter-prev-xsl}"/>
+						</java>
+						
+						<if>
+							<available file="${dita-semia.diff-cmp.filter-prev-xsl}"/>
+							<then>
+								
+								<!-- filter -->
+								<java 
+										classname		="net.sf.saxon.Transform"
+										classpathref	= "dita-semia.diff.saxon.classpath"
+										fork			= "true"
+										failonerror		= "true">
+									<arg value="-s:${prev.temp.dir}${file.separator}${dita-semia.diff.prev.root.filename}"/>
+									<arg value="-o:${prev.temp.dir}${file.separator}${dita-semia.diff.prev.root.filename}${dita-semia.diff-filter.tmp-uri-suffix}"/>
+									<arg value="-xsl:${dita-semia.diff-cmp.filter-prev-xsl}"/>
+									<arg value="-config:${dita.plugin.org.dita-semia.diff.dir}/saxon-config.xml"/>
+									<arg value="-catalog:${dita.dir}/catalog-dita.xml"/>
+									<arg value="tmpUriSuffix=${dita-semia.diff-filter.tmp-uri-suffix}"/>
+								</java>
+								
+								
+								<!-- overwrite original files by generated ones -->
+								<move-tmp file="${prev.temp.dir}${file.separator}${dita-semia.diff.prev.root.filename}" tmp-suffix="${dita-semia.diff-filter.tmp-uri-suffix}"/>
+								<loadfile property="prev-topic-list" srcFile="${prev.temp.dir}/${fullditatopicfile}"/>
+								<if>
+									<isset property="prev-topic-list"/>
+									<then>
+										<for list="${prev-topic-list}" delimiter="${line.separator}" param="file">
+											<sequential>
+												<move-tmp file="${dita.temp.dir}/@{file}" tmp-suffix="${dita-semia.diff-filter.tmp-uri-suffix}"/>
+											</sequential>
+										</for>
+									</then>
+								</if>
+								
+							</then>
+						</if>
+					</then>
+				</if>
+				
+				
+				<!-- diff -->
+				<java 
+						classname		="net.sf.saxon.Transform"
+						classpathref	= "dita-semia.diff.saxon.classpath"
+						fork			= "true"
+						failonerror		= "true">
+					<arg value="-s:${dita.temp.dir}${file.separator}${user.input.file}"/>
+					<arg value="-o:${dita.temp.dir}${file.separator}${user.input.file}${dita-semia.diff-cmp.tmp-uri-suffix}"/>
+					<arg value="-xsl:${dita-semia.diff.compare.xsl}"/>
+					<arg value="-config:${dita.plugin.org.dita-semia.diff.dir}${file.separator}saxon-config.xml"/>
+					<arg value="tmpUriSuffix=${dita-semia.diff-cmp.tmp-uri-suffix}"/>
+					<arg value="prevUri=file:${file.separator}${prev.temp.dir}${file.separator}${dita-semia.diff.prev.root.filename}"/>
+					<arg value="delTopicListFile=file:/${dita.temp.dir}${file.separator}${dita-semia.diff.del-topiclist-file}"/>
+					<arg value="jobFile=file:${file.separator}${dita.temp.dir}${file.separator}.job.xml"/>
+					<arg value="textChangeWrapper=${dita-semia.diff-cmp.text-change-wrapper}"/>
+					<arg value="addAttrName=${dita-semia.diff-cmp.add-attr-name}"/>
+					<arg value="addAttrVal=${dita-semia.diff-cmp.add-attr-val}"/>
+					<arg value="delAttrName=${dita-semia.diff-cmp.del-attr-name}"/>
+					<arg value="delAttrVal=${dita-semia.diff-cmp.del-attr-val}"/>
+					<arg value="singleIndent=${dita-semia.diff.single-indent}"/>
+					<arg value="protectTextMatchSize=${dita-semia.diff-cmp.protect-text-match-size}"/>
+					<arg value="protectTextMatchRatio=${dita-semia.diff-cmp.protect-text-match-ratio}"/>
+				</java>
+				
+				<!-- add files only present in previous version to topic list -->
+				<concat destfile="${dita.temp.dir}${file.separator}fullditatopic.list" append="yes">
+					<file file="${dita.temp.dir}${file.separator}${dita-semia.diff.del-topiclist-file}"/>
+				</concat>
+				<concat destfile="${dita.temp.dir}${file.separator}fullditamapandtopic.list" append="yes">
+					<file file="${dita.temp.dir}${file.separator}${dita-semia.diff.del-topiclist-file}"/>
+				</concat>
+
+				<!-- overwrite original files by generated ones -->
+				<move-tmp file="${dita.temp.dir}/${user.input.file}" tmp-suffix="${dita-semia.diff-cmp.tmp-uri-suffix}"/>
+				<loadfile property="topic-list" srcFile="${dita.temp.dir}/${fullditatopicfile}"/>
+				<if>
+					<isset property="topic-list"/>
+					<then>
+						<for list="${topic-list}" delimiter="${line.separator}" param="file">
+							<sequential>
+								<move-tmp file="${dita.temp.dir}/@{file}" tmp-suffix="${dita-semia.diff-cmp.tmp-uri-suffix}"/>
+							</sequential>
+						</for>
+					</then>
+				</if>
+				<move-tmp file="${dita.temp.dir}${file.separator}.job.xml" tmp-suffix="${dita-semia.diff-cmp.tmp-uri-suffix}"/>
+				
+				
+				<!-- perform standard flagging (copy from preprocess) -->
+				<makeurl file="${args.filter}" property="dita.input.filterfile.url" validate="no"/>
+				<condition property="dita.preprocess.reloadstylesheet.flag-module" value="${dita.preprocess.reloadstylesheet}">
+					<not><isset property="dita.preprocess.reloadstylesheet.flag-module"/></not>
+				</condition>
+				<pipeline message="Add flagging information to topics" taskname="preprocess_flag">
+					<xslt basedir="${dita.temp.dir}" reloadstylesheet="${dita.preprocess.reloadstylesheet.flag-module}" style="${dita.plugin.org.dita.base.dir}/xsl/preprocess/flag.xsl" filenameparameter="FILENAME" filedirparameter="FILEDIR">
+						<ditaFileset format="dita" processingRole="normal"/>
+						<param name="TRANSTYPE" expression="${transtype}"/>
+						<param name="FILTERFILEURL" expression="${dita.input.filterfile.url}"/>
+						<param name="DRAFT" expression="${args.draft}" if="args.draft"/>
+						<param name="BASEDIR" expression="${basedir}"/>
+						<param name="OUTPUTDIR" expression="${output.dir}"/>
+						<!-- Deprecated since 2.4 -->
+						<param name="DBG" expression="${args.debug}" if="args.debug"/>
+						<param name="defaultLanguage" expression="${default.language}"/>
+						
+						<xmlcatalog refid="dita.catalog"/>
+					</xslt>
+				</pipeline>
+				
+				
+			</then>
+		</if>	
+		
+	</target>
+
+</project>

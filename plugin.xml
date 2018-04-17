@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
+<plugin id="org.dita-semia.diff">
+
+	<feature extension="dita.conductor.transtype.check" 	value="dita-semia.resolved4diff"/>
+	<feature extension="dita.transtype.print" 				value="dita-semia.resolved4diff"/>
+	<feature extension="depend.preprocess.pre"				value="dita-semia.preprocess.diff.init"/>
+	<feature extension="depend.preprocess.post"				value="dita-semia.preprocess.diff"/>
+	<feature extension="dita.conductor.lib.import" 			file="java/DitaSemiaDiff.jar"/>
+	
+	<feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+	
+	<transtype name="dita-semia.resolved4diff" desc="DITA-SEMIA Resolved for Diff">
+		<param name="dita-semia.resolved4diff.filename" 		type="file"	desc="Path of the zip file the resolved result is stored to."/>
+		<param name="dita-semia.resolved4diff.filename.xsl" 	type="file"	desc="XSLT script to return the filename."/>
+	</transtype>
+	
+	<!-- do this after topic-num -->
+	<require plugin="org.dita-semia.topic-num" importance="optional"/>
+</plugin>

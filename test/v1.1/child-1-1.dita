@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topic xmlns:cba="http://www.dita-semia.org/conbat" xmlns:xcr="http://www.dita-semia.org/xslt-conref" xmlns:ikd="http://www.dita-semia.org/implicit-keydef"
+	xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" id="x3z_5m2_sb1">
+	<title>Child One</title>
+	<body>
+		<p id="O3S-VM2-SBB">Text Text Text</p>
+	</body>
+	<topic id="HZG-V42-LDB">
+		<title>Child Level-3</title>
+		<body>
+			<p id="PJS-V42-LDB">Text Text Text</p>
+		</body>
+		<topic id="QFC-X42-LDB">
+			<title>Child Level-4</title>
+			<body>
+				<p id="I1S-X42-LDB">Text Text Text</p>
+				<p id="DMQ-GP2-LDB">Added text</p>
+			</body>
+		</topic>
+	</topic>
+</topic>

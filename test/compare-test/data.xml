@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	data elements
+-->
+<root>
+	<curr>
+		<bookmeta>
+			<data class="- topic/data " name="data1"/>
+			<data class="- topic/data " name="data2">new value</data>
+			<data class="- topic/data " name="data3" value="new value"/>
+		</bookmeta>
+	</curr>
+	<prev>
+		<bookmeta>
+			<data class="- topic/data " name="data0"/>
+			<data class="- topic/data " name="data2">old value</data>
+			<data class="- topic/data " name="data3" value="old value"/>
+		</bookmeta>
+	</prev>
+	<result>
+		<bookmeta>
+			<data class="- topic/data " name="data1" rev="dsd:added"/>
+			<data class="- topic/data " name="data0" rev="dsd:deleted"/>
+			<data class="- topic/data " name="data2"><ph class="- topic/ph " rev="dsd:added">new</ph><ph class="- topic/ph " rev="dsd:deleted">old</ph> value</data>
+			<data class="- topic/data " name="data3" value="new value" rev="dsd:added"/>
+			<data class="- topic/data " name="data3" value="old value" rev="dsd:deleted"/>
+		</bookmeta>
+	</result>
+</root>
+

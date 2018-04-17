@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="DITAOT/lib/commons-io-2.5.jar"/>
+	<classpathentry kind="var" path="DITAOT/lib/xml-resolver-1.2.jar"/>
+	<classpathentry kind="var" path="DITAOT/lib/dost.jar"/>
+	<classpathentry kind="var" path="DITAOT/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/java/lib/saxonHE-9.8.0.10.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

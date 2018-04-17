@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+
+	<target name="dita-semia.preprocess.diff.init">
+		
+		<property name="dita-semia.diff.root.filename.file" value="dita-semia.diff.root.filename.txt"/>
+		
+		<if>
+			<not>
+				<isset property="dita-semia.diff.debug"/>
+			</not>
+			<then>
+				<property name="dita-semia.diff.debug" value="false"/>
+			</then>
+		</if>
+		
+		<path id="dita-semia.diff.saxon.classpath">
+			<fileset dir="${dita.plugin.org.dita-semia.diff.dir}/java/lib">
+				<include name="*.jar" />
+			</fileset>
+			<fileset file="${dita.plugin.org.dita-semia.diff.dir}/java/DitaSemiaDiff.jar"/>
+			<fileset dir="${dita.dir}/lib">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+		
+		<if>
+			<isset property="dita-semia.diff-prev-url"/>
+			<then>
+				<property name="preprocess.flagging.skip" value="true"/>
+				<!-- Flagging needs to be done after compare. So it will be performed within dita-semia.preprocess.diff -->
+			</then>
+		</if>
+		
+	</target>
+	
+	
+	<macrodef name="move-tmp">
+		<attribute name="file"/>
+		<attribute name="tmp-suffix"/>
+		
+		<sequential>
+			<var name="tmp-file" value="@{file}@{tmp-suffix}"/>
+			<if>
+				<available file="${tmp-file}"/>
+				<then>
+					<if>
+						<istrue value="${dita-semia.diff.debug}"/>
+						<then>
+							<copy file="${tmp-file}" tofile="@{file}" overwrite="yes" quiet="yes"/>
+						</then>
+						<else>
+							<move file="${tmp-file}" tofile="@{file}"  overwrite="yes" quiet="yes"/>
+						</else>
+					</if>
+				</then>
+			</if>
+		</sequential>
+	</macrodef>
+
+</project>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	topicref
+-->
+<root xml:space="preserve">
+	<curr xml:base="topicref/curr/dummy.xml">
+		<map>
+			<topicref class="+ map/topicref " href="topic1.xml"/>
+			<topicref class="+ map/topicref " href="topic2.xml"/>
+			<topicref class="+ map/topicref " href="topic3-renamed.xml"/>
+			<topicref class="+ map/topicref " href="topic4.xml"/>
+		</map>
+	</curr>
+	<prev xml:base="topicref/prev/dummy.xml">
+		<map>
+			<topicref class="+ map/topicref " href="topic0.xml"/>
+			<topicref class="+ map/topicref " href="topic2.xml"/>
+			<topicref class="+ map/topicref " href="topic1.xml"/>
+			<topicref class="+ map/topicref " href="topic3.xml"/>
+		</map>
+	</prev>
+	<result>
+		<map>
+			<topicref class="+ map/topicref " href="topicref\curr\topic1.xml" rev="dsd:added">
+				<topic xml:base="topicref\curr\topic1.xml">
+	<title>Topic 1</title>
+	<body>
+		<p>Text</p>
+	</body>
+</topic>
+			</topicref>
+			<topicref class="+ map/topicref " href="topicref\prev\topic0.xml" rev="dsd:deleted">
+				<topic xml:base="topicref\prev\topic0.xml">
+	<title>Topic 0</title>
+	<body>
+		<p>Text</p>
+	</body>
+</topic>
+			</topicref>
+			<topicref class="+ map/topicref " href="topic2.xml">
+				<topic xml:base="topicref\curr\topic2.xml">
+	<title>Topic 2</title>
+	<body>
+		<p>Text</p>
+		<p>Text</p>
+	</body>
+</topic>
+			</topicref>
+			<topicref class="+ map/topicref " href="topicref\prev\topic1.xml" rev="dsd:deleted">
+				<topic xml:base="topicref\prev\topic1.xml">
+	<title>Topic 1</title>
+	<body>
+		<p>Text</p>
+	</body>
+</topic>
+			</topicref>
+			<topicref class="+ map/topicref " href="topic3-renamed.xml">
+				<topic xml:base="topicref\curr\topic3-renamed.xml" id="topic3">
+					<title>Topic 3</title>
+					<body>
+						<p rev="dsd:added">1</p>
+						<p>2222</p>
+						<p rev="dsd:deleted">1</p>
+						<p rev="dsd:deleted">4</p>
+						<p>333</p>
+						<p rev="dsd:added">4</p>
+					</body>
+				</topic>
+			</topicref>
+			<topicref class="+ map/topicref " href="topicref\curr\topic4.xml" rev="dsd:added">
+				<topic xml:base="topicref\curr\topic4.xml">
+	<title>Topic 4</title>
+	<body>
+		<p>Text</p>
+	</body>
+</topic>
+			</topicref>
+		</map>
+	</result>
+</root>
+

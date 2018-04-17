@@ -1,0 +1,4 @@
+test/v1.0/temp/
+**/out/
+**/temp/
+java/bin/

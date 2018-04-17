@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+	
+	
+	<target name="dita2dita-semia.resolved4diff" depends="dita2dita-semia.resolved4diff.init, build-init, preprocess, dita2dita-semia.diff.normalize, dita2dita-semia.resolved4diff.save"/>
+	
+	
+	
+	<target name="dita2dita-semia.resolved4diff.init">
+		<property name="preprocess.copy-image.skip" 	value="true"/>
+		<property name="dita-semia.diff.filterNoise" 	value="true"/>
+	</target>
+	
+	
+	
+	
+	<target name="dita2dita-semia.resolved4diff.save">
+
+		<!-- set some properties -->
+		<propertyregex property="outputFile.base" input="${user.input.file}" regexp="[.](dita|ditamap)$" replace=""/>
+
+
+		<!-- identify filename -->
+		<if>
+			<not>
+				<isset property="dita-semia.resolved4diff.filename"/>
+			</not>
+			<then>
+				<if>
+					<isset property="dita-semia.resolved4diff.filename.xsl"/>
+					<then>
+						<property name="filename-file" value="${dita.temp.dir}${file.separator}resolved4diff.filename.txt"/>
+						<xslt 
+								basedir = "${dita.temp.dir}"
+								in		= "${dita.temp.dir}${file.separator}${user.input.file}" 
+								out		= "${filename-file}" 
+								style	= "${dita-semia.resolved4diff.filename.xsl}">
+						</xslt>
+						<loadfile property="filename" srcFile="${filename-file}"/>
+						<if>
+							<isset property="filename"/>
+							<then>
+								<property name="dita-semia.resolved4diff.filename" value="${dita.map.output.dir}${file.separator}${filename}"/>
+								<echo message="Set output file to '${dita-semia.resolved4diff.filename}'"/>
+							</then>
+							<else>
+								<echo message="WARNING: no filename returned by xsl script - using default."/>
+								<property name="dita-semia.resolved4diff.filename" value="${dita.map.output.dir}/${outputFile.base}.zip"/>
+							</else>
+						</if>
+					</then>
+					<else>
+						<property name="dita-semia.resolved4diff.filename" value="${dita.map.output.dir}/${outputFile.base}.zip"/>
+					</else>
+				</if>
+			</then>
+		</if>
+		
+		
+		<!-- write root filename -->
+		<echo file="${dita.temp.dir}${file.separator}${dita-semia.diff.root.filename.file}" message="${user.input.file}"/>
+		
+		
+		<!-- create zip file -->
+		<!--<delete file="${dita-semia.resolved4diff.filename}"/>-->
+		<zip destfile="${dita-semia.resolved4diff.filename}">
+			<fileset file="${dita.temp.dir}${file.separator}${dita-semia.diff.root.filename.file}"/>
+			<fileset file="${dita.temp.dir}${file.separator}${user.input.file}"/>
+			<fileset file="${dita.temp.dir}${file.separator}${fullditatopicfile}"/>
+			<fileset file="${dita.temp.dir}${file.separator}.job.xml"/>
+			<dita-fileset format="dita"/>
+			<dita-fileset format="image"/>
+		</zip>
+		
+	</target>
+
+
+</project>

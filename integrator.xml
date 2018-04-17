@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dummy>
+	<import file="init.xml"/>
+	<import file="normalize.xml"/>
+	<import file="resolve-for-diff.xml"/>
+	<import file="preprocess-diff.xml"/>
+</dummy>

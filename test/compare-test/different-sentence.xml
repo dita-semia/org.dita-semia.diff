@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Different text with some matching words in it
+-->
+<root>
+	<curr>
+		<p>This is some text where some words will be the same but the total meaning has changed. Thus, it makes no sense to compare the text word by word.</p>
+	</curr>
+	<prev>
+		<p>You see some text here with words that might make no sense but they are just to test the compare algorithm.</p>
+	</prev>
+	<result>
+		<p><ph class="- topic/ph " rev="dsd:added">This is some text where some words will be the same but the total meaning has changed. Thus, it makes no sense to compare the text word by word.</ph><ph class="- topic/ph " rev="dsd:deleted">You see some text here with words that might make no sense but they are just to test the compare algorithm.</ph></p>
+	</result>
+</root>
+

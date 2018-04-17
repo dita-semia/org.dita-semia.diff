@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	images
+		- imageX and imageX-renamed are binarry identical
+		- image has been changed
+-->
+<root>
+	<curr xml:base="image/curr/dummy.xml">
+		<body>
+			<image class=" - topic/image " href="image1.png"/>
+			<image class=" - topic/image " href="image2.png"/>
+			<image class=" - topic/image " href="imageX.png"/>
+			<image class=" - topic/image " href="image4.png"/>
+			<image class=" - topic/image " href="image1.png"/>
+			<image class=" - topic/image " href="image1.png"/>
+			<image class=" - topic/image " href="image.png"/>
+		</body>
+	</curr>
+	<prev xml:base="image/prev/dummy.xml">
+		<body>
+			<image class=" - topic/image " href="image0.png"/>
+			<image class=" - topic/image " href="image2.png"/>
+			<image class=" - topic/image " href="image1.png"/>
+			<image class=" - topic/image " href="imageX-renamed.png"/>
+			<image class=" - topic/image " href="image1.png"/>
+			<image class=" - topic/image " href="image1.png"/>
+			<image class=" - topic/image " href="image.png"/>
+		</body>
+	</prev>
+	<result>
+	</result>
+</root>
+

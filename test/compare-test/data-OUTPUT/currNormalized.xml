@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CurrNormalized>
+	<bookmeta xmlns:dsd="http://www.dita-semia.org/diff" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/compare-test/data.xml" dsd:hash="391676254" dsd:size="26">
+			<data dsd:hash="-692515858" dsd:size="1" class="- topic/data " name="data1"/>
+			<data dsd:hash="1272877657" dsd:size="9" dsd:text="true" class="- topic/data " name="data2">new value</data>
+			<data dsd:hash="-821528473" dsd:size="1" class="- topic/data " name="data3" value="new value"/>
+		</bookmeta>
+</CurrNormalized>

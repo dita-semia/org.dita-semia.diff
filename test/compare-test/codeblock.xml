@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	mixed content with PIs
+-->
+<root protectTextMatchSize="0">
+	<curr>
+		<codeblock xml:space="preserve">&lt;root>
+  &lt;child/>
+  &lt;child2/>
+&lt;/root></codeblock>
+	</curr>
+	<prev>
+		<codeblock xml:space="preserve">&lt;root>
+    &lt;child/>
+&lt;/root></codeblock>
+	</prev>
+	<result>
+		<codeblock xml:space="preserve">&lt;root&gt;
+  <ph class="- topic/ph " rev="dsd:deleted">  </ph>&lt;child/&gt;<ph class="- topic/ph " rev="dsd:added">
+  &lt;child2/&gt;</ph>
+&lt;/root&gt;</codeblock>
+	</result>
+</root>
+

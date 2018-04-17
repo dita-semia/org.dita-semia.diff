@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Pure text content
+-->
+<root>
+	<curr>
+		<body>
+			<svg-container class="+ topic/foreign svg-d/svg-container ">
+				<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+					<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="blue"/>
+				</svg>
+			</svg-container>
+		</body>
+	</curr>
+	<prev>
+		<body>
+			<svg-container class="+ topic/foreign svg-d/svg-container ">
+				<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+					<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"/>
+				</svg>
+			</svg-container>
+		</body>
+	</prev>
+	<result>
+		<body>
+			<svg-container class="+ topic/foreign svg-d/svg-container " rev="dsd:added">
+				<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+					<circle cx="50" cy="50" fill="blue" r="40" stroke="black" stroke-width="3"/>
+				</svg>
+			</svg-container>
+			<svg-container class="+ topic/foreign svg-d/svg-container " rev="dsd:deleted">
+				<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+					<circle cx="50" cy="50" fill="red" r="40" stroke="black" stroke-width="3"/>
+				</svg>
+			</svg-container>
+		</body>
+	</result>
+</root>
+

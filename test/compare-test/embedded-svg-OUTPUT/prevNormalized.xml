@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrevNormalized>
+	<body xmlns:dsd="http://www.dita-semia.org/diff" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/compare-test/embedded-svg.xml" dsd:hash="2085926737" dsd:size="28">
+			<svg-container dsd:hash="71306807" dsd:size="21" class="+ topic/foreign svg-d/svg-container ">
+				<svg xmlns="http://www.w3.org/2000/svg" dsd:hash="-1944278740" dsd:size="12" height="100" width="100">
+					<circle dsd:hash="1021224612" dsd:size="1" cx="50" cy="50" fill="red" r="40" stroke="black" stroke-width="3"/>
+				</svg>
+			</svg-container>
+		</body>
+</PrevNormalized>

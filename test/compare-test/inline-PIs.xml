@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	mixed content with PIs
+-->
+<root protectTextMatchSize="0">
+	<curr>
+		<p>1 <i>2222 <?PI3?>333 <?PI4?>444</i> <?PI5?>555 <?PI6?>6</p>
+	</curr>
+	<prev>
+		<p>1 <i>2222 33 444</i> 55 6</p>
+	</prev>
+	<result>
+		<p>1 <i>2222 <ph class="- topic/ph " rev="dsd:added"><?PI3?>333</ph><ph class="- topic/ph " rev="dsd:deleted">33</ph> <?PI4?>444</i> <ph class="- topic/ph " rev="dsd:added"><?PI5?>555</ph><ph class="- topic/ph " rev="dsd:deleted">55</ph> <?PI6?>6</p>
+	</result>
+</root>
+

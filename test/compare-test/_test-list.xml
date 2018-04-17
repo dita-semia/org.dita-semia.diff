@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<test>p-with-id.xml</test>
+	<test>p-without-id.xml</test>
+	<test>simple-text.xml</test>
+	<test>changed-inline-wrapping.xml</test>
+	<test>nested-inline-elements.xml</test>
+	<test>inline-references.xml</test>
+	<test>inline-PIs.xml</test>
+	<test>codeblock.xml</test>
+	<test>single-word-change.xml</test>
+	<test>single-word-change-collection.xml</test>
+	<test>mixed-mixed-content.xml</test>
+	<test>embedded-svg.xml</test>
+	<test>data.xml</test>
+	<test>topicref.xml</test>
+</list>

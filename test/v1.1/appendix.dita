@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topic xmlns:cba="http://www.dita-semia.org/conbat" xmlns:xcr="http://www.dita-semia.org/xslt-conref" xmlns:ikd="http://www.dita-semia.org/implicit-keydef"
+	xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" id="x3z_5m2_sbb">
+	<title>Appendix</title>
+	<body>
+		<section id="AM1-PXX-BDB">
+			<title>Image</title>
+			<fig>
+				<title>Changed Image</title>
+				<image href="dita-logo.png" id="XGD-LZX-BDB" width="10cm"/>
+			</fig>
+			<fig id="ML1-QN2-LDB">
+				<title>Added Image</title>
+				<image href="dita-logo.png" width="10cm" id="VXV-QN2-LDB"/>
+			</fig>
+		</section>
+		<section id="Y1M-NZX-BDB">
+			<title>Conref</title>
+			<p conref="conref-source.dita#x3z_5m2_sbb/E1Y-QZX-BDB" id="JQV-SZX-BDB"/>
+		</section>
+		<section id="GT1-YRG-CDB">
+			<title>codeblock</title>
+			<codeblock>&lt;root>
+  &lt;child/>
+  &lt;child2/>
+&lt;/root></codeblock>
+		</section>
+		<section id="O1D-XBM-CDB">
+			<title>Whitespaces</title>
+			<ul>
+				<li><i>Loremsi ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd
+					accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit</i>
+					<i>Loremsi ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Stet clita kasd
+					voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+					Lorem ipsum dolor sit amet.</i> Loremsi ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+					voluptua.</li>
+			</ul>
+		</section>
+		<section id="ZLC-25N-HDB">
+			<title>Mixed Content</title>
+			<ul id="YBN-25N-HDB">
+				<li id="ZBN-25N-HDB">
+					<p id="ZN4-25N-HDB">Changed tagging: <i>italic1</i> <b>nested</b> <i>italic2</i> <b>single-word</b></p>
+				</li>
+				<li id="FR1-F5N-HDB">
+					<p id="ZTB-F5N-HDB">Changed xref: <xref href="#x3z_5m2_sbb/KN3-P5N-HDB"/></p>
+				</li>
+				<li id="SF3-45N-HDB">Renamed link target: <xref href="appendix.dita#x3z_5m2_sbb/GP2-15N-HDB" format="dita"/></li>
+				<li id="FHC-HLM-JDB">
+					<p id="NXQ-3LM-JDB">Link to renamed file: <xref href="chapter-1.dita#xyz_m22_sbb/ZVJ-Q4N-HDB"/></p>
+				</li>
+				<li id="GDS-CVM-JDB">
+					<p id="HDS-CVM-JDB">Link with changed explicit content: <xref href="#x3z_5m2_sbb/OXR-N5N-HDB">Renamed link text (new)</xref></p>
+				</li>
+				<li id="ZNJ-S5N-HDB">
+					<p id="BJD-JLM-JDB">Single letter changed: Text</p>
+				</li>
+				<li id="PS5-T5N-HDB">
+					<p id="MXV-JLM-JDB">Single letter changed per word: Text Text</p>
+				</li>
+				<li id="JKY-114-HDB">
+					<p id="O11-KLM-JDB">Different text: completely different content.</p>
+				</li>
+				<li id="XJG-V5N-HDB">
+					<p id="GBG-KLM-JDB">Longer text with multiple changes: This is some text where some words will be the same but the total meaning has changed. Thus, it makes no sense to compare the
+						text word by word.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="ZVJ-Q4N-HDB">
+			<title>Fixed Link Target</title>
+			<p id="AWJ-Q4N-HDB">Some more Text to increase the size of this node so it is less likely to be moved.</p>
+		</section>
+		<section id="ETH-P4N-HDB">
+			<title>Moved Link Target</title>
+			<p id="FTH-P4N-HDB">Some Text.</p>
+		</section>
+		<section id="GP2-15N-HDB">
+			<title>Renamed Link Target (new)</title>
+			<p id="HP2-15N-HDB">Some Text.</p>
+		</section>
+		<section id="KN3-P5N-HDB">
+			<title>Link Target 1</title>
+			<p id="LN3-P5N-HDB">Some Text.</p>
+		</section>
+		<section id="OXR-N5N-HDB">
+			<title>Link Target 2</title>
+			<p id="PXR-N5N-HDB">Some Text.</p>
+		</section>
+		<section id="Q2F-R3H-KDB"><title>Embedded SVG</title><svg-container>
+			<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+				<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="blue"/>
+			</svg>
+			</svg-container></section>
+	</body>
+</topic>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Compare mixed content with element-only content
+-->
+<root>
+	<curr xml:base="curr.xml">
+		<li><i>111</i>
+			<i>222</i></li>
+	</curr>
+	<prev xml:base="prev.xml">
+		<li><i>111</i> <i>222</i> 333</li>
+	</prev>
+	<result>
+		<li><i>111</i> <i>222</i><ph class="- topic/ph " rev="dsd:deleted"> 333</ph></li>
+	</result>
+</root>
+
