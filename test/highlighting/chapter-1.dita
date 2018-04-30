@@ -5,7 +5,38 @@
 	<body>
 		<p id="GFH-422-SBB">Text Text Text</p>
 		<p id="HPG-YP4-HDB">xref: <xref href="#gtq_m22_sbb" format="dita">Link Text <b>bold</b> <ph rev="dsd:added">added</ph><ph rev="dsd:deleted">deleted</ph></xref>, <xref href="#gtq_m22_sbb"
-			format="dita" rev="dsd:added">Link added</xref>, <xref href="#gtq_m22_sbb" format="dita" rev="dsd:deleted">Link deleted</xref></p>
+			format="dita" rev="dsd:added">Link added</xref>, <xref href="#gtq_m22_sbb" format="dita" rev="dsd:deleted"><codeph>Link deleted</codeph></xref></p>
+		<note type="note" rev="dsd:added">Added note</note>
+		<table frame="all" rowsep="1" colsep="1" id="V4J-5DH-4DB" rev="dsd:added">
+			<tgroup cols="3">
+				<colspec colname="c1" colnum="1" colwidth="1.0*"/>
+				<colspec colname="c2" colnum="2" colwidth="1.0*"/>
+				<colspec colname="c3" colnum="3" colwidth="1.0*"/>
+				<tbody>
+					<row id="W4J-5DH-4DB">
+						<entry>Added table</entry>
+						<entry/>
+						<entry/>
+					</row>
+					<row id="X4J-5DH-4DB">
+						<entry/>
+						<entry/>
+						<entry/>
+					</row>
+					<row id="Y4J-5DH-4DB">
+						<entry/>
+						<entry/>
+						<entry/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="YHR-ZHH-4DB" rev="dsd:added">
+			<li id="ZHR-ZHH-4DB">Added list</li>
+		</ul>
+		<ul id="N5L-33H-4DB">
+			<li id="O5L-33H-4DB" rev="dsd:added">Added list item</li>
+		</ul>
 		<fig id="XNF-HCF-LDB">
 			<title>Image</title>
 			<image href="dita-logo.png" width="160mm" id="LBY-3CF-LDB" rev="dsd:added"/>

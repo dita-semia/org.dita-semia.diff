@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	referencing elements -> atomic content and match by @href
+-->
+<root protectTextMatchSize="0" doSingleWordCompare="false">
+	<curr>
+		<p xml:space="preserve"><i><xref class="- topic/xref " href="../x.xml#1">Link Text 1</xref></i></p>
+	</curr>
+	<prev>
+		<p xml:space="preserve"><i><xref class="- topic/xref " href="../x.xml#1">Link Text 2</xref></i></p>
+	</prev>
+	<result>
+		<p xml:space="preserve"><i><xref class="- topic/xref " href="../x.xml#1">Link Text <ph class="- topic/ph " rev="dsd:added">1</ph><ph class="- topic/ph " rev="dsd:deleted">2</ph></xref></i></p>
+	</result>
+</root>
+

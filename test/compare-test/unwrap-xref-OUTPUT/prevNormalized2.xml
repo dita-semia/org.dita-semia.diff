@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrevNormalized2>
+	<dsd:textParent xmlns:dsd="http://www.dita-semia.org/diff" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/compare-test/unwrap-xref.xml">
+		<dsd:text dsd:hash="-670529065" dsd:size="7" dsd:mergeCode="0">Invalid</dsd:text>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<dsd:text dsd:hash="3321850" dsd:size="4" dsd:mergeCode="0">link</dsd:text>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<dsd:text dsd:hash="-430332880" dsd:size="8" dsd:mergeCode="0">replaced</dsd:text>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<dsd:text dsd:hash="3159" dsd:size="2" dsd:mergeCode="0">by</dsd:text>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<dsd:text dsd:hash="951530617" dsd:size="7" dsd:mergeCode="0">content</dsd:text>
+		<dsd:text dsd:hash="58" dsd:size="1" dsd:mergeCode="0">:</dsd:text>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<ph dsd:hash="-1781313774" dsd:size="9" dsd:mergeCode="3576">
+			<xref dsd:hash="173147318" dsd:size="9" href="invalid-target.dita#id" dsd:atomic="">
+				<?ditaot usertext?>
+				<codeph dsd:hash="1308364749" dsd:size="9">&lt;Content&gt;</codeph>
+			</xref>
+		</ph>
+	</dsd:textParent>
+</PrevNormalized2>

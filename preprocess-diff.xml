@@ -95,7 +95,7 @@
 						<isset property="dita-semia.diff-cmp.protect-text-match-ratio"/>
 					</not>
 					<then>
-						<property name="dita-semia.diff-cmp.protect-text-match-ratio" value="0.3"/>
+						<property name="dita-semia.diff-cmp.protect-text-match-ratio" value="0.2"/>
 					</then>
 				</if>
 				<if>
@@ -106,7 +106,14 @@
 						<property name="dita-semia.diff.ditaval-to-xsl.xsl" value="${dita.plugin.org.dita-semia.diff.dir}/xsl/ditaval-to-xsl.xsl"/>
 					</then>
 				</if>
-				<property name="dita-semia.diff.root.filename.file" value="dita-semia.diff.root.filename.txt"/>
+				<if>
+					<not>
+						<isset property="dita-semia.diff.single-word-compare"/>
+					</not>
+					<then>
+						<property name="dita-semia.diff.single-word-compare" value="true"/>
+					</then>
+				</if>
 				
 				
 				
@@ -119,13 +126,12 @@
 				<propertyregex property="diff-prev-file" input="${dita-semia.diff-prev-url}" regexp="^file:" replace=""/>
 				<unzip src="${diff-prev-file}" dest="${prev.temp.dir}"/>
 
-				<loadfile property="dita-semia.diff.prev.root.filename" srcFile="${prev.temp.dir}${file.separator}${dita-semia.diff.root.filename.file}"/>
+				<loadfile property="dita-semia.diff.prev.root.filename" srcFile="${prev.temp.dir}${file.separator}user.input.file.list"/>
 				
 				<!-- filter previous file -->
 				<if>
 					<isset property="dita.input.valfile"/>
 					<then>
-						<echo>Filter previous version</echo>
 						<property name="dita-semia.diff-cmp.filter-prev-xsl" 	value="${prev.temp.dir}${file.separator}dita-semia-diff-filter.xsl"/>
 						<property name="dita-semia.diff-filter.tmp-uri-suffix" 	value=".diff-fltr-tmp.xml"/>
 						<java 
@@ -142,6 +148,8 @@
 						<if>
 							<available file="${dita-semia.diff-cmp.filter-prev-xsl}"/>
 							<then>
+								
+								<echo>Filter previous version</echo>
 								
 								<!-- filter -->
 								<java 
@@ -166,7 +174,7 @@
 									<then>
 										<for list="${prev-topic-list}" delimiter="${line.separator}" param="file">
 											<sequential>
-												<move-tmp file="${dita.temp.dir}/@{file}" tmp-suffix="${dita-semia.diff-filter.tmp-uri-suffix}"/>
+												<move-tmp file="${prev.temp.dir}/@{file}" tmp-suffix="${dita-semia.diff-filter.tmp-uri-suffix}"/>
 											</sequential>
 										</for>
 									</then>

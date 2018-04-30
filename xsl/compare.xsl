@@ -160,7 +160,7 @@
 				<xsl:with-param name="parent2" select="$parent2"/>
 			</xsl:call-template>
 		</xsl:variable>
-		
+		<!--<xsl:message select="$lcs"/>-->
 		<xsl:call-template name="processContent">
 			<xsl:with-param name="parent1" 	select="$parent1"/>
 			<xsl:with-param name="parent2" 	select="$parent2"/>

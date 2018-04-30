@@ -26,6 +26,10 @@
 		<!-- ignore for diff -->
 	</xsl:template>
 
+	<xsl:template match="*[@dsd:id]/@id" mode="getHash" as="xs:integer?">
+		<!-- ignore the @id when there is a @dsd:id -->
+	</xsl:template>
+
 	<xsl:template match="attribute()" mode="getHash" as="xs:integer?">
 		<xsl:sequence select="dsd:getHashFromString(concat(name(), '=', .))"/>
 	</xsl:template>

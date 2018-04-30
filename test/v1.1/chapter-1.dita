@@ -13,5 +13,9 @@
 			<title>Moved Link Target</title>
 			<p id="FTH-P4N-HDB">Some Text.</p>
 		</section>
+		<section id="RDS-JY3-PDB">
+			<title>Filtering</title>
+			<p id="SDS-JY3-PDB">Text<ph audience="internal"> filtered</ph></p>
+		</section>
 	</body>
 </topic>

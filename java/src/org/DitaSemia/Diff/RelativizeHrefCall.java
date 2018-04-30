@@ -19,9 +19,9 @@ public class RelativizeHrefCall extends ExtensionFunctionCall {
 	public Sequence call(XPathContext context, Sequence[] arguments) throws XPathException {
 		try {
 
-			final String href	= arguments[0].head().getStringValue().replace("\\", "/");
-			final String base 	= arguments[1].head().getStringValue().replace("\\", "/");
-			
+			final String href	= arguments[0].head().getStringValue().replace('\\', '/');
+			final String base 	= arguments[1].head().getStringValue().replace('\\', '/');
+		
 			return StringValue.makeStringValue(relativize(href, base)).asAtomic();
 			
 		} catch (Exception e) {
@@ -30,8 +30,6 @@ public class RelativizeHrefCall extends ExtensionFunctionCall {
 	}
 
 	public static String relativize(String href, String base) throws URISyntaxException, MalformedURLException {
-		//System.out.println("href: " + href);
-		//System.out.println("base: " + base);
 		
 		final URI 	hrefUri 	= new URI(href);
 		final URI	baseUri 	= new URI(base);
@@ -47,6 +45,8 @@ public class RelativizeHrefCall extends ExtensionFunctionCall {
 		final String fragment 	= hrefUri.getRawFragment();
 		final String suffix		= (fragment == null) ? ("") : ("#" + fragment); 
 				
-		return relPath.toString() + suffix;
+		//System.out.println("relativize - href: '" + href + "', base: '" + base + "'");
+		
+		return relPath.toString().replace('\\', '/') + suffix;
 	}
 }

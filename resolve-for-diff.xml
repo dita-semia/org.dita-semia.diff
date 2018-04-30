@@ -58,15 +58,10 @@
 		</if>
 		
 		
-		<!-- write root filename -->
-		<echo file="${dita.temp.dir}${file.separator}${dita-semia.diff.root.filename.file}" message="${user.input.file}"/>
-		
-		
 		<!-- create zip file -->
-		<!--<delete file="${dita-semia.resolved4diff.filename}"/>-->
-		<zip destfile="${dita-semia.resolved4diff.filename}">
-			<fileset file="${dita.temp.dir}${file.separator}${dita-semia.diff.root.filename.file}"/>
-			<fileset file="${dita.temp.dir}${file.separator}${user.input.file}"/>
+		<zip destfile="${dita-semia.resolved4diff.filename}" encoding="UTF-8">
+			<zipfileset file="${dita.temp.dir}${file.separator}${user.input.file}" fullpath="${user.input.file}"/>
+			<fileset file="${dita.temp.dir}${file.separator}user.input.file.list"/>
 			<fileset file="${dita.temp.dir}${file.separator}${fullditatopicfile}"/>
 			<fileset file="${dita.temp.dir}${file.separator}.job.xml"/>
 			<dita-fileset format="dita"/>

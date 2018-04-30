@@ -16,7 +16,9 @@
 		</section>
 		<section id="Y1M-NZX-BDB">
 			<title>Conref</title>
-			<p conref="conref-source.dita#x3z_5m2_sbb/E1Y-QZX-BDB" id="JQV-SZX-BDB"/>
+			<ul conref="conref-source.dita#x3z_5m2_sbb/E1Y-QZX-BDB" id="JQV-SZX-BDB">
+				<li/>
+			</ul>
 		</section>
 		<section id="GT1-YRG-CDB">
 			<title>codeblock</title>

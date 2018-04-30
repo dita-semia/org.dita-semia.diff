@@ -68,11 +68,13 @@
 			<xsl:apply-templates select="$doc/root/curr/*[1]" mode="normalize">
 				<xsl:with-param name="setBaseUri"	select="true()"/>
 			</xsl:apply-templates>
+			<!--<xsl:sequence select="$doc/root/curr/*[1]"/>-->
 		</xsl:variable>
 		<xsl:variable name="prevNormalized" as="element()">
 			<xsl:apply-templates select="$doc/root/prev/*[1]" mode="normalize">
 				<xsl:with-param name="setBaseUri"	select="true()"/>
 			</xsl:apply-templates>
+			<!--<xsl:sequence select="$doc/root/prev/*[1]"/>-->
 		</xsl:variable>
 		
 		<xsl:document>

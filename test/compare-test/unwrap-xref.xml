@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	
+-->
+<root protectTextMatchSize="0" doSingleWordCompare="false">
+	<curr>
+		<p>Invalid link replaced by content: <ph><codeph>&lt;Content></codeph></ph></p>
+	</curr>
+	<prev>
+		<p>Invalid link replaced by content: <ph><xref href="invalid-target.dita#id"><?ditaot usertext?><codeph>&lt;Content></codeph></xref></ph></p>
+	</prev>
+	<result>
+		<p>Invalid link replaced by content: <ph><codeph rev="dsd:added">&lt;Content&gt;</codeph><xref href="invalid-target.dita#id" rev="dsd:deleted"><?ditaot usertext?><codeph>&lt;Content&gt;</codeph></xref></ph></p>
+	</result>
+</root>
+

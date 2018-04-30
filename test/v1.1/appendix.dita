@@ -3,6 +3,7 @@
 	xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" id="x3z_5m2_sbb">
 	<title>Appendix</title>
 	<body>
+		<note type="note">Added note</note>
 		<section id="AM1-PXX-BDB">
 			<title>Image</title>
 			<fig>
@@ -16,7 +17,9 @@
 		</section>
 		<section id="Y1M-NZX-BDB">
 			<title>Conref</title>
-			<p conref="conref-source.dita#x3z_5m2_sbb/E1Y-QZX-BDB" id="JQV-SZX-BDB"/>
+			<ul conref="conref-source.dita#x3z_5m2_sbb/E1Y-QZX-BDB" id="JQV-SZX-BDB">
+				<li/>
+			</ul>
 		</section>
 		<section id="GT1-YRG-CDB">
 			<title>codeblock</title>

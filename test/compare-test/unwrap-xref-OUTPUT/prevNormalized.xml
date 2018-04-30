@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrevNormalized>
+	<p xmlns:dsd="http://www.dita-semia.org/diff" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/compare-test/unwrap-xref.xml" dsd:hash="111291897" dsd:size="43" dsd:text="true">Invalid link replaced by content: <ph dsd:hash="-1781313774" dsd:size="9"><xref dsd:hash="173147318" dsd:size="9" href="invalid-target.dita#id"><?ditaot usertext?><codeph dsd:hash="1308364749" dsd:size="9">&lt;Content&gt;</codeph></xref></ph></p>
+</PrevNormalized>

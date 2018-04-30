@@ -153,7 +153,7 @@
 	</xsl:template>
 	
 	<xsl:template match="*[ancestor-or-self::*/@dsd:change = $CHANGE_DELETED][contains(@class, $CLASS_IMAGE)]/@href[starts-with(., 'file:/')]" mode="write writeSpacePreserve" priority="20">
-		<!-- keep absolute URI -->
+		<!-- keep absolute URI beacuse relative URLs will be resolved based on the original URL which -->
 		<xsl:copy/>
 	</xsl:template>
 	
@@ -161,14 +161,17 @@
 		<xsl:param name="outputUri" 	as="xs:anyURI"/>
 		<xsl:param name="rootResult" 	as="document-node()" tunnel="yes"/>
 
-		<xsl:variable name="fixedHref"	as="xs:string"	select="dsd:getFixedHref(., $rootResult)"/>
+		<xsl:variable name="fixedHref"		as="xs:string"	select="dsd:getFixedHref(., $rootResult)"/>
+		<xsl:variable name="relativeHref"	as="xs:string"	select="dsd:relativizeHref($fixedHref, $outputUri)"/>
 		
 		<!--<xsl:if test="not(string(.) = $fixedHref)">
 			<xsl:message>redirect href "{dsd:relativizeHref(., $outputUri)}" to "{dsd:relativizeHref($fixedHref, $outputUri)}"</xsl:message>
 		</xsl:if>-->
+		
+		<!--<xsl:message>href '{.}', outputUri: '{$outputUri}', relativeHref: '{$relativeHref}'</xsl:message>-->
 
 		<!-- make references relative again -->
-		<xsl:attribute name="href" select="dsd:relativizeHref($fixedHref, $outputUri)"/>
+		<xsl:attribute name="href" select="$relativeHref"/>
 	</xsl:template>
 
 

@@ -33,16 +33,18 @@
 			<figurelist class="- map/topicref bookmap/figurelist "/>
 		</booklists>
 	</frontmatter>
-	<chapter class="- map/topicref bookmap/chapter " href="dita-semia.diff-prev\chapter-0.dita" type="topic" rev="dsd:deleted">
+	<chapter class="- map/topicref bookmap/chapter " href="dita-semia.diff-prev/chapter-0.dita" type="topic" rev="dsd:deleted">
 		<topicmeta class="- map/topicmeta " data-topic-id="gtq_m22_sby">
 			<resourceid appid="gtq_m22_sby" class="- topic/resourceid " oxy-source="topic"/>
 			<navtitle class="- topic/navtitle ">Chapter Zero</navtitle>
+			<?ditaot gentext?>
 			<linktext class="- map/linktext ">Chapter Zero</linktext>
 		</topicmeta>
-		<topicref class="- map/topicref " href="dita-semia.diff-prev\child-0-1.dita" type="topic">
+		<topicref class="- map/topicref " href="dita-semia.diff-prev/child-0-1.dita" type="topic">
 			<topicmeta class="- map/topicmeta " data-topic-id="x3z_5m2_sbx">
 				<resourceid appid="x3z_5m2_sbx" class="- topic/resourceid " oxy-source="topic"/>
 				<navtitle class="- topic/navtitle ">Child One</navtitle>
+				<?ditaot gentext?>
 				<linktext class="- map/linktext ">Child One</linktext>
 			</topicmeta>
 		<topic xmlns:cba="http://www.dita-semia.org/conbat" xmlns:ikd="http://www.dita-semia.org/implicit-keydef" xmlns:xcr="http://www.dita-semia.org/xslt-conref" xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot" xmlns:dsd="http://www.dita-semia.org/diff" DITAArchVersion="1.3" class="- topic/topic " domains="(topic abbrev-d) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d xml-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic svg-d) (topic sw-d) (topic ui-d) (topic ut-d) a(props deliveryTarget)" id="x3z_5m2_sbx" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>
@@ -103,7 +105,8 @@
 	<related-links class="- topic/related-links " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>
 		<linkpool class="- topic/linkpool ">
 			<link class="- topic/link " format="dita" href="chapter-1.dita" mapclass="- map/topicref bookmap/chapter " role="parent" scope="local" type="topic">
-				<linktext class="- topic/linktext ">Chapter One</linktext>
+				<?ditaot usertext?>
+				<linktext class="- topic/linktext "><?ditaot gentext?>Chapter One</linktext>
 			</link>
 		</linkpool>
 	<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></related-links>
@@ -125,6 +128,7 @@
 			<topicmeta class="- map/topicmeta " data-topic-id="e1q_wm2_sb2">
 				<resourceid appid="e1q_wm2_sb2" class="- topic/resourceid " oxy-source="topic"/>
 				<navtitle class="- topic/navtitle ">Child Two</navtitle>
+				<?ditaot gentext?>
 				<linktext class="- map/linktext ">Child Two</linktext>
 			</topicmeta>
 		<topic xmlns:cba="http://www.dita-semia.org/conbat" xmlns:ikd="http://www.dita-semia.org/implicit-keydef" xmlns:xcr="http://www.dita-semia.org/xslt-conref" xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot" xmlns:dsd="http://www.dita-semia.org/diff" class="- topic/topic " domains="(topic abbrev-d) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d xml-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic svg-d) (topic sw-d) (topic ui-d) (topic ut-d) a(props deliveryTarget)" gns1:DITAArchVersion="1.3" id="e1q_wm2_sb2" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>
@@ -146,10 +150,11 @@
 		</topic>
 	</topic>
 <ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></topic></topicref>
-		<topicref class="- map/topicref " href="dita-semia.diff-prev\child-1-3.dita" type="topic" rev="dsd:deleted">
+		<topicref class="- map/topicref " href="dita-semia.diff-prev/child-1-3.dita" type="topic" rev="dsd:deleted">
 			<topicmeta class="- map/topicmeta " data-topic-id="e1q_wm2_sb3">
 				<resourceid appid="e1q_wm2_sb3" class="- topic/resourceid " oxy-source="topic"/>
 				<navtitle class="- topic/navtitle ">Child Three</navtitle>
+				<?ditaot gentext?>
 				<linktext class="- map/linktext ">Child Three</linktext>
 			</topicmeta>
 		<topic xmlns:cba="http://www.dita-semia.org/conbat" xmlns:ikd="http://www.dita-semia.org/implicit-keydef" xmlns:xcr="http://www.dita-semia.org/xslt-conref" xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot" xmlns:dsd="http://www.dita-semia.org/diff" DITAArchVersion="1.3" class="- topic/topic " domains="(topic abbrev-d) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d xml-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic svg-d) (topic sw-d) (topic ui-d) (topic ut-d) a(props deliveryTarget)" id="e1q_wm2_sb3" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>
@@ -186,44 +191,28 @@
 			<title class="- topic/title ">Moved Link Target</title>
 			<p class="- topic/p " id="FTH-P4N-HDB">Some Text.</p>
 		<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></section>
+		<section class="- topic/section " id="RDS-JY3-PDB">
+			<title class="- topic/title ">Filtering</title>
+			<p class="- topic/p " id="SDS-JY3-PDB">Text</p>
+		</section>
 	</body>
 	<related-links class="- topic/related-links " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>
 		<linkpool class="- topic/linkpool ">
 			<linkpool class="- topic/linkpool ">
 				<link class="- topic/link " format="dita" href="child-1-1.dita" mapclass="- map/topicref " role="child" scope="local" type="topic">
-					<linktext class="- topic/linktext ">Child One</linktext>
+					<?ditaot usertext?>
+					<linktext class="- topic/linktext "><?ditaot gentext?>Child One</linktext>
 				</link>
-				<link audience="internal" class="- topic/link " format="dita" href="dita-semia.diff-prev\child-1-2.dita" mapclass="- map/topicref " role="child" scope="local" type="topic">
-					<linktext class="- topic/linktext ">Child Two</linktext>
-				</link>
-				<link class="- topic/link " format="dita" href="dita-semia.diff-prev\child-1-3.dita" mapclass="- map/topicref " role="child" scope="local" type="topic">
-					<linktext class="- topic/linktext ">Child Three</linktext>
-				</link>
-				<link audience="internal" class="- topic/link " format="dita" href="dita-semia.diff-prev\child-1-4.dita" mapclass="- map/topicref " role="child" scope="local" type="topic">
-					<linktext class="- topic/linktext ">Child Four</linktext>
+				<link class="- topic/link " format="dita" href="dita-semia.diff-prev/child-1-3.dita" mapclass="- map/topicref " role="child" scope="local" type="topic">
+					<?ditaot usertext?>
+					<linktext class="- topic/linktext "><?ditaot gentext?>Child Three</linktext>
 				</link>
 			</linkpool>
 		</linkpool>
 	<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></related-links>
 </topic></chapter>
 	<chapter class="- map/topicref bookmap/chapter " navtitle="Chapter Two">
-		<topicref class="- map/topicref " href="childmap/child-2-1.dita" type="topic">
-			<?path2project ..\?>
-			<?path2project-uri ../?>
-			<topicmeta class="- map/topicmeta " data-topic-id="x3z_5m2_sbb">
-				<resourceid appid="x3z_5m2_sbb" class="- topic/resourceid " oxy-source="topic"/>
-				<navtitle class="- topic/navtitle ">Child One</navtitle>
-				<?ditaot gentext?>
-				<linktext class="- map/linktext ">Child One</linktext>
-			</topicmeta>
-		<topic class="- topic/topic " domains="(topic abbrev-d) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d xml-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic svg-d) (topic sw-d) (topic ui-d) (topic ut-d) a(props deliveryTarget)" gns1:DITAArchVersion="1.3" id="x3z_5m2_sbb" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/v1.1/temp/dita-semia-pdf/childmap/child-2-1.dita">
-	<title class="- topic/title ">Child One</title>
-	<body class="- topic/body ">
-		<p class="- topic/p " id="O3S-VM2-SBB">Text Text Text</p>
-		<image class="- topic/image " href="dummy.png" placement="inline" width="15cm" rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop><ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></image>
-	</body>
-</topic></topicref>
-		<topicref class="- map/topicref " href="childmap/child-2-2.dita" type="topic">
+		<topicref class="- map/topicref " href="childmap/child-2-2.dita" product="P3" type="topic">
 			<?path2project ..\?>
 			<?path2project-uri ../?>
 			<topicmeta class="- map/topicmeta " data-topic-id="e1q_wm2_sbb">
@@ -243,12 +232,14 @@
 		<topicmeta class="- map/topicmeta " data-topic-id="gtq_m22_sbz">
 			<resourceid appid="gtq_m22_sbz" class="- topic/resourceid " oxy-source="topic"/>
 			<navtitle class="- topic/navtitle ">Chapter Three</navtitle>
+			<?ditaot gentext?>
 			<linktext class="- map/linktext ">Chapter Three</linktext>
 		</topicmeta>
 		<topicref class="- map/topicref " href="child-3-1.dita" type="topic">
 			<topicmeta class="- map/topicmeta " data-topic-id="x3z_5m2_sbz">
 				<resourceid appid="x3z_5m2_sbz" class="- topic/resourceid " oxy-source="topic"/>
 				<navtitle class="- topic/navtitle ">Child One</navtitle>
+				<?ditaot gentext?>
 				<linktext class="- map/linktext ">Child One</linktext>
 			</topicmeta>
 		<topic xmlns:cba="http://www.dita-semia.org/conbat" xmlns:ikd="http://www.dita-semia.org/implicit-keydef" xmlns:xcr="http://www.dita-semia.org/xslt-conref" xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot" xmlns:dsd="http://www.dita-semia.org/diff" class="- topic/topic " domains="(topic abbrev-d) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d xml-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic svg-d) (topic sw-d) (topic ui-d) (topic ut-d) a(props deliveryTarget)" gns1:DITAArchVersion="1.3" id="x3z_5m2_sbz" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>
@@ -275,6 +266,7 @@
 	<topic class="- topic/topic " domains="(topic abbrev-d) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d xml-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic svg-d) (topic sw-d) (topic ui-d) (topic ut-d) a(props deliveryTarget)" gns1:DITAArchVersion="1.3" id="x3z_5m2_sbb" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/v1.1/temp/dita-semia-pdf/appendix.dita">
 	<title class="- topic/title ">Appendix</title>
 	<body class="- topic/body ">
+		<note class="- topic/note " type="note" rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>Added note<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></note>
 		<section class="- topic/section " id="AM1-PXX-BDB">
 			<title class="- topic/title ">Image</title>
 			<fig class="- topic/fig ">
@@ -293,7 +285,10 @@
 		</section>
 		<section class="- topic/section " id="Y1M-NZX-BDB">
 			<title class="- topic/title ">Conref</title>
-			<p class="- topic/p " id="JQV-SZX-BDB">Lorem<ph class="- topic/ph " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>si<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph> ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <ph class="- topic/ph " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>At vero eos et accusam et justo duo dolores et ea rebum. <ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <ph class="- topic/ph " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>At vero eos et accusam et justo duo dolores et ea rebum. <ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<ul class="- topic/ul " id="JQV-SZX-BDB">
+				<li class="- topic/li " id="d7e17">Lorem<ph class="- topic/ph " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>si<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph> ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <ph class="- topic/ph " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>At vero eos et accusam et justo duo dolores et ea rebum. <ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <ph class="- topic/ph " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>At vero eos et accusam et justo duo dolores et ea rebum. <ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</li>
+				<li class="- topic/li " id="d7e20">More content</li>
+			</ul>
 		</section>
 		<section class="- topic/section " id="GT1-YRG-CDB">
 			<title class="- topic/title ">codeblock</title>
@@ -315,13 +310,13 @@
 					<p class="- topic/p " id="PYG-HQN-HDB">local</p>
 					<ul class="- topic/ul " id="AV4-3QN-HDB">
 						<li class="- topic/li " id="S1Y-3QN-HDB">
-							<p class="- topic/p " id="T1Y-3QN-HDB">to persistent content: <xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/ZVJ-Q4N-HDB" type="section">Fixed Link Target</xref></p>
+							<p class="- topic/p " id="T1Y-3QN-HDB">to persistent content: <xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/ZVJ-Q4N-HDB" type="section"><?ditaot gentext?>Fixed Link Target</xref></p>
 						</li>
 						<li class="- topic/li " id="U1Y-3QN-HDB">
-							<p class="- topic/p " id="V1Y-3QN-HDB">to deleted content: <xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/M54-Y4N-HDB" type="section">Deleted Link Target</xref></p>
+							<p class="- topic/p " id="V1Y-3QN-HDB">to deleted content: <xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/M54-Y4N-HDB" type="section"><?ditaot gentext?>Deleted Link Target</xref></p>
 						</li>
 						<li class="- topic/li " id="W1Y-3QN-HDB">
-							<p class="- topic/p " id="X1Y-3QN-HDB">to moved (= deleted and inserted) content: <xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/ETH-P4N-HDB" type="section">Moved Link Target</xref></p>
+							<p class="- topic/p " id="X1Y-3QN-HDB">to moved (= deleted and inserted) content: <xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/ETH-P4N-HDB" type="section"><?ditaot gentext?>Moved Link Target</xref></p>
 						</li>
 					</ul>
 				</li>
@@ -329,18 +324,18 @@
 					<p class="- topic/p " id="IFX-HQN-HDB">other renamed file:</p>
 					<ul class="- topic/ul ">
 						<li class="- topic/li " id="JRT-JQN-HDB">
-							<p class="- topic/p " id="KRT-JQN-HDB">to persistent content: <xref class="- topic/xref " href="chapter-1.dita#xyz_m22_sbb/ZVJ-Q4N-HDB" type="section">Fixed Link Target</xref></p>
+							<p class="- topic/p " id="KRT-JQN-HDB">to persistent content: <xref class="- topic/xref " href="chapter-1.dita#xyz_m22_sbb/ZVJ-Q4N-HDB" type="section"><?ditaot gentext?>Fixed Link Target</xref></p>
 						</li>
 						<li class="- topic/li " id="LRT-JQN-HDB">
-							<p class="- topic/p " id="MRT-JQN-HDB">to deleted content: <xref class="- topic/xref " href="chapter-1.dita#xyz_m22_sbb/M54-Y4N-HDB" type="section">Deleted Link Target</xref></p>
+							<p class="- topic/p " id="MRT-JQN-HDB">to deleted content: <xref class="- topic/xref " href="chapter-1.dita#xyz_m22_sbb/M54-Y4N-HDB" type="section"><?ditaot gentext?>Deleted Link Target</xref></p>
 						</li>
 						<li class="- topic/li " id="NRT-JQN-HDB">
-							<p class="- topic/p " id="ORT-JQN-HDB">to moved (= deleted and inserted) content: <xref class="- topic/xref " href="chapter-1.dita#xyz_m22_sbb/ETH-P4N-HDB" type="section">Moved Link Target</xref></p>
+							<p class="- topic/p " id="ORT-JQN-HDB">to moved (= deleted and inserted) content: <xref class="- topic/xref " href="chapter-1.dita#xyz_m22_sbb/ETH-P4N-HDB" type="section"><?ditaot gentext?>Moved Link Target</xref></p>
 						</li>
 					</ul>
 				</li>
 				<li class="- topic/li " id="FCH-MQN-HDB">
-					<p class="- topic/p " id="K5V-YTN-HDB">to deleted file: <xref class="- topic/xref " href="dita-semia.diff-prev\chapter-0.dita#gtq_m22_sby/GWS-TQN-HDB" type="section">Link Target</xref></p>
+					<p class="- topic/p " id="K5V-YTN-HDB">to deleted file: <xref class="- topic/xref " href="dita-semia.diff-prev/chapter-0.dita#gtq_m22_sby/GWS-TQN-HDB" type="section"><?ditaot gentext?>Link Target</xref></p>
 				</li>
 			</ul>
 		<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></section>
@@ -351,14 +346,14 @@
 					<p class="- topic/p " id="ZN4-25N-HDB">Changed tagging: <i class="+ topic/ph hi-d/i ">italic1</i><ph class="- topic/ph " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop> <b class="+ topic/ph hi-d/b ">nested</b> <ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph><i class="+ topic/ph hi-d/i "><ph class="- topic/ph " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop> <b class="+ topic/ph hi-d/b ">nested</b> <ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph>italic2</i> <b class="+ topic/ph hi-d/b " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>single-word<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></b><ph class="- topic/ph " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>single-word<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph></p>
 				</li>
 				<li class="- topic/li " id="FR1-F5N-HDB">
-					<p class="- topic/p " id="ZTB-F5N-HDB">Changed xref: <xref class="- topic/xref " href="appendix.dita#x3z_5m2_sbb/KN3-P5N-HDB" type="section" rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>Link Target 1<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></xref><xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/OXR-N5N-HDB" type="section" rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>Link Target 2<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></xref></p>
+					<p class="- topic/p " id="ZTB-F5N-HDB">Changed xref: <xref class="- topic/xref " href="appendix.dita#x3z_5m2_sbb/KN3-P5N-HDB" type="section" rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop><?ditaot gentext?>Link Target 1<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></xref><xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/OXR-N5N-HDB" type="section" rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop><?ditaot gentext?>Link Target 2<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></xref></p>
 				</li>
-				<li class="- topic/li " id="SF3-45N-HDB">Renamed link target: <xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/GP2-15N-HDB" type="section"><?ditaot usertext?>Renamed Link Target (<ph class="- topic/ph " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>new)<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph><ph class="- topic/ph " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>old)<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph></xref></li>
+				<li class="- topic/li " id="SF3-45N-HDB">Renamed link target: <xref class="- topic/xref " format="dita" href="appendix.dita#x3z_5m2_sbb/GP2-15N-HDB" type="section"><?ditaot usertext?><?ditaot usertext?>Renamed Link Target (<ph class="- topic/ph " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>new)<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph><ph class="- topic/ph " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>old)<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph></xref></li>
 				<li class="- topic/li " id="FHC-HLM-JDB">
-					<p class="- topic/p " id="NXQ-3LM-JDB">Link to renamed file: <xref class="- topic/xref " href="chapter-1.dita#xyz_m22_sbb/ZVJ-Q4N-HDB" type="section"><?ditaot gentext?>Fixed Link Target</xref></p>
+					<p class="- topic/p " id="NXQ-3LM-JDB">Link to renamed file: <xref class="- topic/xref " href="chapter-1.dita#xyz_m22_sbb/ZVJ-Q4N-HDB" type="section"><?ditaot gentext?><?ditaot gentext?>Fixed Link Target</xref></p>
 				</li>
 				<li class="- topic/li " id="GDS-CVM-JDB">
-					<p class="- topic/p " id="HDS-CVM-JDB">Link with changed explicit content: <xref class="- topic/xref " href="#x3z_5m2_sbb/OXR-N5N-HDB" type="section"><?ditaot usertext?>Renamed link text (<ph class="- topic/ph " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>new)<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph><ph class="- topic/ph " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>old)<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph></xref></p>
+					<p class="- topic/p " id="HDS-CVM-JDB">Link with changed explicit content: <xref class="- topic/xref " href="#x3z_5m2_sbb/OXR-N5N-HDB" type="section"><?ditaot usertext?><?ditaot usertext?>Renamed link text (<ph class="- topic/ph " rev="dsd:added"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#106010;background-color:#e0ffe0;text-decoration:underline;"><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>new)<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:added" color="#106010" backcolor="#e0ffe0" style="underline" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph><ph class="- topic/ph " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>old)<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph></xref></p>
 				</li>
 				<li class="- topic/li " id="ZNJ-S5N-HDB">
 					<p class="- topic/p " id="BJD-JLM-JDB">Single letter changed: Te<ph class="- topic/ph " rev="dsd:deleted"><ditaval-startprop class="+ topic/foreign ditaot-d/ditaval-startprop " outputclass="color:#601010;background-color:#ffc0c0;"><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-startprop>e<ditaval-endprop class="+ topic/foreign ditaot-d/ditaval-endprop "><revprop action="flag" val="dsd:deleted" color="#601010" backcolor="#ffc0c0" style="line-through" changebar="style:solid;width:3pt;offset:5pt;color:blue"/></ditaval-endprop></ph>xt</p>

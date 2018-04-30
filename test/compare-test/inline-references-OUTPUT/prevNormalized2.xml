@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrevNormalized2>
+	<dsd:textParent xmlns:dsd="http://www.dita-semia.org/diff" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/compare-test/inline-references.xml">
+		<dsd:text dsd:hash="48657" dsd:size="3" dsd:mergeCode="0">111</dsd:text>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<image dsd:hash="1247634672" dsd:size="1" href="image1" dsd:atomic=""/>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<dsd:text dsd:hash="1600" dsd:size="2" dsd:mergeCode="0">22</dsd:text>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<xref dsd:hash="1460074272" dsd:size="9" href="../x.xml#1" dsd:atomic="">Link Text</xref>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<dsd:text dsd:hash="50643" dsd:size="3" dsd:mergeCode="0">333</dsd:text>
+		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
+		<xref dsd:hash="763550980" dsd:size="11" href="../y.xml#2" dsd:atomic="">Link Text 2</xref>
+	</dsd:textParent>
+</PrevNormalized2>

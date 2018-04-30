@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrevNormalized>
+	<p xmlns:dsd="http://www.dita-semia.org/diff" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/compare-test/inline-references.xml" dsd:hash="-1631159332" dsd:size="34" dsd:text="true">111 <image dsd:hash="1247634672" dsd:size="1" href="image1"/> 22 <xref dsd:hash="1460074272" dsd:size="9" href="../x.xml#1">Link Text</xref> 333 <xref dsd:hash="763550980" dsd:size="11" href="../y.xml#2">Link Text 2</xref></p>
+</PrevNormalized>

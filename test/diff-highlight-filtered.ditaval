@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <val>
-	<prop action="exclude" att="audience" val="internal"/>
+	<prop action="exclude" att="audience" 	val="internal"/>
+	<prop action="exclude" att="product" 	val="P1"/>
+	<prop action="exclude" att="product" 	val="P2"/>
+	<prop action="include" att="product" 	val="P3"/>
 	<revprop action="flag" val="dsd:added" 		color="#106010" backcolor="#e0ffe0" style="underline" 		changebar="style:solid;width:3pt;offset:5pt;color:blue"/>
 	<revprop action="flag" val="dsd:deleted" 	color="#601010" backcolor="#ffc0c0" style="line-through" 	changebar="style:solid;width:3pt;offset:5pt;color:blue"/>
 	<revprop action="flag" val="dsd:changed" 	backcolor="#ffffc0"/>

@@ -118,6 +118,26 @@
 		</xsl:choose>
 	</xsl:template>
 	
+	<xsl:template match="*[@dsd:mergeCode][not(self::dsd:text)]" mode="matchScore" as="xs:double" priority="25">
+		<xsl:param name="compareNode" as="element()"/>
+		
+		<xsl:choose>
+			<xsl:when test="@dsd:mergeCode = $compareNode/@dsd:mergeCode">
+				<!-- recurse into content -->
+				<!--<xsl:message select="."/>
+				<xsl:message select="$compareNode"/>-->
+				<xsl:apply-templates select="node()[1]" mode="#current">
+					<xsl:with-param name="compareNode" select="$compareNode/node()[1]"/>
+				</xsl:apply-templates>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:next-match>
+					<xsl:with-param name="compareNode" select="$compareNode"/>
+				</xsl:next-match>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
 	
 	<xsl:template match="*" mode="matchScore" as="xs:double" priority="20">
 		<xsl:param name="compareNode" 	as="element()"/>
@@ -145,6 +165,7 @@
 			</xsl:choose>
 		</xsl:variable>
 		<!--<xsl:message>match-score: {@href}, {$compareNode/@href}: {$score}</xsl:message>-->
+		<!--<xsl:message select="$compareNode"/>-->
 		<xsl:sequence select="$score"/>
 	</xsl:template>
 	
@@ -153,8 +174,12 @@
 		<xsl:param name="compareNode" as="element()"/>
 		
 		<xsl:choose>
-			<xsl:when test="@id = $compareNode/@id">
-				<!-- Match! -->
+			<xsl:when test="@dsd:id = $compareNode/@dsd:id">
+				<!-- Match based on the original id! -->
+				<xsl:sequence select="1.0"/>
+			</xsl:when>
+			<xsl:when test="empty(@dsd:id) and (@id = $compareNode/@id)">
+				<!-- Match! (use @id only when there is no @dsd:id) -->
 				<xsl:sequence select="1.0"/>
 			</xsl:when>
 			<xsl:when test="exists($compareNode/@id)">

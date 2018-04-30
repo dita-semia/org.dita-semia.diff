@@ -16,5 +16,9 @@
 			<title>Fixed Link Target</title>
 			<p id="AWJ-Q4N-HDB">Some more Text to increase the size of this node so it is less likely to be moved.</p>
 		</section>
+		<section id="RDS-JY3-PDB">
+			<title>Filtering</title>
+			<p id="SDS-JY3-PDB">Text<ph audience="internal"> filtered</ph></p>
+		</section>
 	</body>
 </topic>

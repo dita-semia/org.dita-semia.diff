@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LcsDebuggingInfo>
+	<matrix>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1" match=""/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="3" s1="1" s2="1"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2" match=""/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3" match=""/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4" match=""/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 6" s2="1 2 3 4 6" match=""/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 6" s2="1 2 3 4 6"/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 8" s2="1 2 3 4 6" match=""/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 8" s2="1 2 3 4 6"/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 10" s2="1 2 3 4 6" match=""/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 10" s2="1 2 3 4 6"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 6" s2="1 2 3 4 6"/>
+			<lcs weight="17.004" s1="1 2 3 4 6 7" s2="1 2 3 4 6 7" match=""/>
+			<lcs weight="17.004" s1="1 2 3 4 6 7" s2="1 2 3 4 6 7"/>
+			<lcs weight="17.004" s1="1 2 3 4 6 7" s2="1 2 3 4 6 7"/>
+			<lcs weight="17.004" s1="1 2 3 4 6 7" s2="1 2 3 4 6 7"/>
+			<lcs weight="17.004" s1="1 2 3 4 6 7" s2="1 2 3 4 6 7"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 6" s2="1 2 3 4 8" match=""/>
+			<lcs weight="17.004" s1="1 2 3 4 6 7" s2="1 2 3 4 6 7"/>
+			<lcs weight="18.005000000000003" s1="1 2 3 4 6 7 8" s2="1 2 3 4 6 7 8" match=""/>
+			<lcs weight="18.005000000000003" s1="1 2 3 4 6 7 8" s2="1 2 3 4 6 7 8"/>
+			<lcs weight="18.005000000000003" s1="1 2 3 4 6 7 8" s2="1 2 3 4 6 7 8"/>
+			<lcs weight="18.005000000000003" s1="1 2 3 4 6 7 8" s2="1 2 3 4 6 7 8"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 6" s2="1 2 3 4 8"/>
+			<lcs weight="17.004" s1="1 2 3 4 6 7" s2="1 2 3 4 6 7"/>
+			<lcs weight="18.005000000000003" s1="1 2 3 4 6 7 8" s2="1 2 3 4 6 7 8"/>
+			<lcs weight="21.006000000000004" s1="1 2 3 4 6 7 8 9" s2="1 2 3 4 6 7 8 9" match=""/>
+			<lcs weight="21.006000000000004" s1="1 2 3 4 6 7 8 9" s2="1 2 3 4 6 7 8 9"/>
+			<lcs weight="21.006000000000004" s1="1 2 3 4 6 7 8 9" s2="1 2 3 4 6 7 8 9"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 6" s2="1 2 3 4 10" match=""/>
+			<lcs weight="17.004" s1="1 2 3 4 6 7" s2="1 2 3 4 6 7"/>
+			<lcs weight="18.005000000000003" s1="1 2 3 4 6 7 8" s2="1 2 3 4 6 7 8"/>
+			<lcs weight="21.006000000000004" s1="1 2 3 4 6 7 8 9" s2="1 2 3 4 6 7 8 9"/>
+			<lcs weight="22.007000000000005" s1="1 2 3 4 6 7 8 9 10" s2="1 2 3 4 6 7 8 9 10" match=""/>
+			<lcs weight="22.007000000000005" s1="1 2 3 4 6 7 8 9 10" s2="1 2 3 4 6 7 8 9 10"/>
+		</row>
+		<row>
+			<lcs/>
+			<lcs weight="3" s1="1" s2="1"/>
+			<lcs weight="4.001" s1="1 2" s2="1 2"/>
+			<lcs weight="5.002000000000001" s1="1 2 3" s2="1 2 3"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="6.003000000000001" s1="1 2 3 4" s2="1 2 3 4"/>
+			<lcs weight="7.003000000000001" s1="1 2 3 4 6" s2="1 2 3 4 10"/>
+			<lcs weight="17.004" s1="1 2 3 4 6 7" s2="1 2 3 4 6 7"/>
+			<lcs weight="18.005000000000003" s1="1 2 3 4 6 7 8" s2="1 2 3 4 6 7 8"/>
+			<lcs weight="21.006000000000004" s1="1 2 3 4 6 7 8 9" s2="1 2 3 4 6 7 8 9"/>
+			<lcs weight="22.007000000000005" s1="1 2 3 4 6 7 8 9 10" s2="1 2 3 4 6 7 8 9 10"/>
+			<lcs weight="22.007000000000005" s1="1 2 3 4 6 7 8 9 10" s2="1 2 3 4 6 7 8 9 10"/>
+		</row>
+	</matrix>
+	<simplifyTextLcs>
+		<list>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="3" s1="1" s2="1"/>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="1" s1="2" s2="2"/>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="1" s1="3" s2="3"/>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="1" s1="4" s2="4"/>
+			<changed xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="3"/>
+			<changed xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="2"/>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="1" s1="6" s2="6"/>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="11" s1="7" s2="7"/>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="1" s1="8" s2="8"/>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="3" s1="9" s2="9"/>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="1" s1="10" s2="10"/>
+		</list>
+		<filteredList>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="6" s1="1 2 3 4" s2="1 2 3 4"/>
+			<changed xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="5"/>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="17" s1="6 7 8 9 10" s2="6 7 8 9 10"/>
+		</filteredList>
+	</simplifyTextLcs>
+	<lcs s1="1 2 3 4 6 7 8 9 10" s2="1 2 3 4 6 7 8 9 10"/>
+</LcsDebuggingInfo>

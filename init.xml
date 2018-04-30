@@ -4,8 +4,6 @@
 
 	<target name="dita-semia.preprocess.diff.init">
 		
-		<property name="dita-semia.diff.root.filename.file" value="dita-semia.diff.root.filename.txt"/>
-		
 		<if>
 			<not>
 				<isset property="dita-semia.diff.debug"/>

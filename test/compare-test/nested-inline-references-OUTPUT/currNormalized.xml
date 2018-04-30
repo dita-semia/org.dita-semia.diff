@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CurrNormalized>
+	<p xmlns:dsd="http://www.dita-semia.org/diff" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/compare-test/nested-inline-references.xml" dsd:hash="1378375087" dsd:size="11" dsd:text="true" xml:space="preserve"><i dsd:hash="1994070695" dsd:size="11" dsd:text="true"><xref dsd:hash="673084821" dsd:size="11" class="- topic/xref " dsd:text="true" href="../x.xml#1">Link Text 1</xref></i></p>
+</CurrNormalized>

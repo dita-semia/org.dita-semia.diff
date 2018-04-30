@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+	<p>Invalid link replaced by content: <ph><codeph rev="dsd:added">&lt;Content&gt;</codeph><xref href="invalid-target.dita#id" rev="dsd:deleted"><?ditaot usertext?><codeph>&lt;Content&gt;</codeph></xref></ph></p>
+</result>

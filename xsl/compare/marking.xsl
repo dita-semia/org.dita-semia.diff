@@ -34,7 +34,7 @@
 		</xsl:copy>
 	</xsl:template>
 		
-	<xsl:template match="dsd:text" mode="added addedContent">
+	<xsl:template match="dsd:text | *[@dsd:atomic]" mode="added addedContent">
 		<xsl:copy>
 			<xsl:apply-templates select="attribute()" mode="addedContent"/>
 			<xsl:attribute name="dsd:change" select="$CHANGE_ADDED"/>
@@ -78,12 +78,16 @@
 		<xsl:message terminate="yes">ERROR: can't mark plain text as being deleted. ({.})</xsl:message>
 	</xsl:template>
 	
-	<xsl:template match="dsd:text" mode="deleted deletedContent">
+	<xsl:template match="dsd:text | *[@dsd:atomic]" mode="deleted deletedContent">
 		<xsl:copy>
 			<xsl:apply-templates select="attribute()" mode="deletedContent"/>
 			<xsl:attribute name="dsd:change" select="$CHANGE_DELETED"/>
 			<xsl:apply-templates select="node()" mode="deletedContent"/>
 		</xsl:copy>
+	</xsl:template>
+	
+	<xsl:template match="processing-instruction('ditaot')" mode="deleted deletedContent">
+		<xsl:copy/>	<!-- is required at some place, e.g. within xref to identify content as usertext-->
 	</xsl:template>
 	
 	<xsl:template match="processing-instruction() | comment()" mode="deleted deletedContent">

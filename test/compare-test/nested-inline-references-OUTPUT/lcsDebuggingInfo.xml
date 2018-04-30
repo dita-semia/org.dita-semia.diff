@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LcsDebuggingInfo>
+	<matrix>
+		<row>
+			<lcs/>
+			<lcs weight="11" s1="1" s2="1" match=""/>
+		</row>
+	</matrix>
+	<simplifyTextLcs>
+		<list>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="11" s1="1" s2="1"/>
+		</list>
+		<filteredList>
+			<match xmlns:dsd="http://www.dita-semia.org/diff" dsd:size="11" s1="1" s2="1"/>
+		</filteredList>
+	</simplifyTextLcs>
+	<lcs s1="1" s2="1"/>
+</LcsDebuggingInfo>
