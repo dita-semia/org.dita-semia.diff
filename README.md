@@ -1,6 +1,9 @@
 # org.dita-semia.diff
 DITA-OT plugin to reate a diff of a DITA document with a previous version of the same document.
 
+You can find here as a sample the comparision result for a bookmap (generated with org.dita-semia.pdf plugin): [_diff-test.pdf](https://github.com/dita-semia/org.dita-semia.diff/blob/master/test/v1.1/out/pdf/_diff-test.pdf)
+
+
 The plugin consists of two parts:
 
 1. **Resolve-for-Diff** 
@@ -20,14 +23,14 @@ It works with single topics as well as with maps and bookmaps. Note, that when a
 Referenced images as well as embedded SVG graphics are handled as well: When there is any difference the previous one will be added as deleted and the current one marked as added. So there is no highlighting of the difference within the image.
 
 
-#### Parameters for Resolve-for-Diff
+### Parameters for Resolve-for-Diff
 
 - **dita-semia.resolved4diff.filename**: The filename of the generated zip file. (The file will be stored in the folder as set by output.dir.)
 
 - **dita-semia.resolved4diff.filename.xsl**: The path to an XSLT script to dynamically determine the filename. The input to this script will be the input file after preprocessing. (Will only be used when the parameter dita-semia.resolved4diff.filename has not been set.)  
 
 
-#### Parameters for Comparision
+### Parameters for Comparision
 
 - **dita-semia.diff-prev-url**: The path to the resolved zip file of the earlir version the current document shold be compared with. Setting this parameter activates the comparision.
 
@@ -54,7 +57,7 @@ Referenced images as well as embedded SVG graphics are handled as well: When the
 - **dita-semia.diff.single-word-compare**: Boolean to specify if changes within single words should be breakon down to the changed letters. If set to false a single changed letter will result in the whole word being marked a sdeleted with the previous spelling and as added with the current spelling. (default: true) 
 
 
-#### Algorithm of Comparision
+### Algorithm of Comparision
 
 The comparision consists of two phases:
 
@@ -83,7 +86,7 @@ The comparision consists of two phases:
 	Comments and processing instructions are completely ignored for the comparision. ut they will be passed through to the result document.
 
 
-	#####Match Score#####
+	#### Match Score
 	
 	The match score is calculated in these steps:
 	
@@ -103,7 +106,7 @@ The comparision consists of two phases:
 	9. same element (unless in text content): 0.01 (comparable but with lower certainty)
 	
 	
-	#####Processing the Content#####
+	#### Processing the Content
 	
 	After the LCS has been calculated each matching pair will be treaten like this:
 	
@@ -114,12 +117,12 @@ The comparision consists of two phases:
 	At the end the remaining non-matching content will be inserted as well. 
 
 
-##### Images
+#### Images
 
 Images are just compared for equalty based on the hash value of the referenced file or the embedded svg content. So when a single pixel has been changed the whole previous image will be marked as deleted and the current one marked as added.
 
 
-##### Text Content
+#### Text Content
 
 Elements with text content are identified by containing text nodes not only consisting of white spaces or having the attribute xml:space set to preserve.
 Additionally when two elements are compared and only one of them is identified as containing text the other will be treaten the same way.
