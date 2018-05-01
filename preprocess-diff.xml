@@ -123,7 +123,7 @@
 
 				<!-- unzip prev file -->
 				<property name="prev.temp.dir" value="${dita.temp.dir}${file.separator}dita-semia.diff-prev"/>
-				<propertyregex property="diff-prev-file" input="${dita-semia.diff-prev-url}" regexp="^file:" replace=""/>
+				<propertyregex property="diff-prev-file" input="${dita-semia.diff-prev-url}" regexp="^(file:)?" replace=""/>
 				<unzip src="${diff-prev-file}" dest="${prev.temp.dir}"/>
 
 				<loadfile property="dita-semia.diff.prev.root.filename" srcFile="${prev.temp.dir}${file.separator}user.input.file.list"/>
