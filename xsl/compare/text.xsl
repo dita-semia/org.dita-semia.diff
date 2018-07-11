@@ -73,6 +73,11 @@
 		<xsl:call-template name="atomicInlineElement"/>	<!-- inline elements with id are atomic -->
 	</xsl:template>
 	
+	<xsl:template match="*[@class = $CLASS_PATH_KEY_XREF]" mode="splitText">
+		<!-- this element should be transparent for text based comparision -->
+		<xsl:apply-templates select="node()" mode="#current"/>
+	</xsl:template>
+	
 	<xsl:template match="element()" mode="splitText">
 		<xsl:variable name="content" as="node()*">
 			<xsl:choose>
@@ -85,7 +90,7 @@
 			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="attrHashList" as="xs:integer*">
-			<xsl:apply-templates select="attribute()" mode="getHash"/>
+			<xsl:apply-templates select="@class | @id | @href" mode="getHash"/>
 		</xsl:variable>
 		<xsl:variable name="mergeCode" 		as="xs:integer"	select="dsd:getHashFromSequence((name(.), $attrHashList))"/>
 		<xsl:variable name="currElement" 	as="element()" 	select="."/>

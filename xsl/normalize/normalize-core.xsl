@@ -157,7 +157,7 @@
 			<xsl:when test="$spacePreserve">
 				<xsl:copy/>
 			</xsl:when>
-			<xsl:when test="($spaceCollapse) and matches(., '^\s+$') and empty(following-sibling::element())">
+			<xsl:when test="($spaceCollapse) and matches(., '^\s+$') and empty(following-sibling::node())">
 				<!-- drop whitespaces at the end -->
 			</xsl:when>
 			<xsl:when test="$spaceCollapse">
