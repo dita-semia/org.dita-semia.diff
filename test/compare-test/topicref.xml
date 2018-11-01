@@ -20,7 +20,7 @@
 		</map>
 	</prev>
 	<result>
-		<map>
+		<map xmlns:dsd="http://www.dita-semia.org/diff">
 			<topicref class="+ map/topicref " href="topicref/curr/topic1.xml" rev="dsd:added">
 				<topic xml:base="topicref/curr/topic1.xml">
 	<title>Topic 1</title>

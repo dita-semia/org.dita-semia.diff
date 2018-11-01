@@ -22,6 +22,15 @@ The testing is done with PDF transtype. (For additional features like marking th
 It works with single topics as well as with maps and bookmaps. Note, that when a topic has been moved it will be makred as deleted in the previous places and be marked as added in the new place
 Referenced images as well as embedded SVG graphics are handled as well: When there is any difference the previous one will be added as deleted and the current one marked as added. So there is no highlighting of the difference within the image.
 
+## Special Features:
+- Fully integrated into DITA-OT.
+- Handle complete Maps including images.
+- Compare during preprocess generated content (e.g. conref, keyref). 
+- Created variants based on a single resolved file.
+- Compare images.
+- Compare words on character level.
+- Merge changes in highly modified text.
+- Handle added/deleted columns androws in tables.
 
 ### Parameters for Resolve-for-Diff
 

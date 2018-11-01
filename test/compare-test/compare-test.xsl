@@ -63,6 +63,8 @@
 		<xsl:variable name="protectTextMatchSize"	as="xs:integer"	select="if ($doc/*/@protectTextMatchSize) 	then $doc/*/@protectTextMatchSize 	else $protectTextMatchSize"/>
 		<xsl:variable name="protectTextMatchRatio"	as="xs:double"	select="if ($doc/*/@protectTextMatchRatio) 	then $doc/*/@protectTextMatchRatio 	else $protectTextMatchRatio"/>
 		<xsl:variable name="doSingleWordCompare"	as="xs:boolean"	select="if ($doc/*/@doSingleWordCompare) 	then $doc/*/@doSingleWordCompare 	else $doSingleWordCompare"/>
+		<xsl:variable name="relevantTextClasses"	as="xs:string*"	select="if ($doc/*/@relevantTextClasses) 	then tokenize($doc/*/@relevantTextClasses, '[,\s]+') 	else tokenize($relevantTextClasses, '[,\s]+')"/>
+		
 		
 		<xsl:variable name="currNormalized" as="element()">
 			<xsl:apply-templates select="$doc/root/curr/*[1]" mode="normalize">
@@ -94,7 +96,9 @@
 						<xsl:when test="$isTextMode">
 							<dsd:textParent>
 								<xsl:attribute name="xml:base" select="base-uri($doc)"/>
-								<xsl:apply-templates select="$currNormalized/node()" mode="splitText"/>
+								<xsl:apply-templates select="$currNormalized/node()" mode="splitText">
+									<xsl:with-param name="relevantTextClasses"		select="$relevantTextClasses" 	tunnel="yes"/>
+								</xsl:apply-templates>
 							</dsd:textParent>
 						</xsl:when>
 						<xsl:otherwise>
@@ -107,7 +111,9 @@
 						<xsl:when test="$isTextMode">
 							<dsd:textParent>
 								<xsl:attribute name="xml:base" select="base-uri($doc)"/>
-								<xsl:apply-templates select="$prevNormalized/node()" mode="splitText"/>
+								<xsl:apply-templates select="$prevNormalized/node()" mode="splitText">
+									<xsl:with-param name="relevantTextClasses"		select="$relevantTextClasses" 	tunnel="yes"/>
+								</xsl:apply-templates>
 							</dsd:textParent>
 						</xsl:when>
 						<xsl:otherwise>
@@ -134,8 +140,9 @@
 							<xsl:with-param name="debugOutput"				select="true()"/>
 							<xsl:with-param name="isTextMode"				select="$isTextMode"			tunnel="yes"/>
 							<xsl:with-param name="protectTextMatchSize"		select="$protectTextMatchSize" 	tunnel="yes"/>
-							<xsl:with-param name="protectTextMatchRatio"	select="$protectTextMatchRatio" tunnel="yes"/>
+							<xsl:with-param name="protectTextMatchRatio"	select="$protectTextMatchRatio"	tunnel="yes"/>
 							<xsl:with-param name="doSingleWordCompare"		select="$doSingleWordCompare" 	tunnel="yes"/>
+							<xsl:with-param name="relevantTextClasses"		select="$relevantTextClasses" 	tunnel="yes"/>
 						</xsl:call-template>
 					</xsl:if>
 				</LcsDebuggingInfo>
@@ -147,6 +154,7 @@
 					<xsl:with-param name="protectTextMatchSize"		select="$protectTextMatchSize" 	tunnel="yes"/>
 					<xsl:with-param name="protectTextMatchRatio"	select="$protectTextMatchRatio" tunnel="yes"/>
 					<xsl:with-param name="doSingleWordCompare"		select="$doSingleWordCompare" 	tunnel="yes"/>
+					<xsl:with-param name="relevantTextClasses"		select="$relevantTextClasses" 	tunnel="yes"/>
 				</xsl:apply-templates>
 			</result>
 		</xsl:document>

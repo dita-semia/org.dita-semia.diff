@@ -15,6 +15,14 @@
 	<xsl:variable name="CLASS_KEYWORD"			as="xs:string"	select="' topic/keyword '"/>
 	<xsl:variable name="CLASS_SVG_CONTAINER"	as="xs:string"	select="' svg-d/svg-container '"/>
 	<xsl:variable name="CLASS_DATA"				as="xs:string"	select="' topic/data '"/>
+	<xsl:variable name="CLASS_BODY"				as="xs:string"	select="' topic/body '"/>
+	<xsl:variable name="CLASS_TGROUP"			as="xs:string"	select="' topic/tgroup '"/>
+	<xsl:variable name="CLASS_COLSPEC"			as="xs:string"	select="' topic/colspec '"/>
+	<xsl:variable name="CLASS_THEAD"			as="xs:string"	select="' topic/thead '"/>
+	<xsl:variable name="CLASS_TBODY"			as="xs:string"	select="' topic/tbody '"/>
+	<xsl:variable name="CLASS_ROW"				as="xs:string"	select="' topic/row '"/>
+	<xsl:variable name="CLASS_ENTRY"			as="xs:string"	select="' topic/entry '"/>
+	
 	
 	<xsl:variable name="CLASS_PATH_KEY_XREF"	as="xs:string"	select="'+ topic/ph akr-d/key-xref '"/>
 

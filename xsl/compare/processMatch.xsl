@@ -44,10 +44,13 @@
 				<xsl:message>processMatch topicref {@href|@navtitle}, {$matchNode/@href|$matchNode/@navtitle}</xsl:message>
 			</xsl:if>-->
 			
-			<xsl:call-template name="compareContent">
+			<xsl:apply-templates select="." mode="compareContent">
+				<xsl:with-param name="parent2" select="$matchNode"/>
+			</xsl:apply-templates>
+			<!--<xsl:call-template name="compareContent">
 				<xsl:with-param name="parent1" select="."/>
 				<xsl:with-param name="parent2" select="$matchNode"/>
-			</xsl:call-template>
+			</xsl:call-template>-->
 		</xsl:copy>
 	</xsl:template>
 
@@ -67,6 +70,6 @@
 		-->
 		<xsl:attribute name="dsd:matchHref" select="resolve-uri($matchNode/@href, base-uri($matchNode))"/>
 	</xsl:template>
-	
+
 
 </xsl:stylesheet>

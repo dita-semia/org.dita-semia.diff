@@ -13,6 +13,25 @@
 	
 	<xsl:mode name="matchScore" on-no-match="fail" on-multiple-match="fail"/>
 	
+	
+	
+	<xsl:template match="*[@dsd:hash]" mode="matchScore" as="xs:double" priority="120">
+		<xsl:param name="compareNode" as="element()"/>
+		
+		<xsl:choose>
+			<xsl:when test="@dsd:hash = $compareNode/@dsd:hash">
+				<!-- perfect match! -->
+				<xsl:sequence select="1.0"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:next-match>
+					<xsl:with-param name="compareNode" select="$compareNode"/>
+				</xsl:next-match>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
+	
 	<xsl:template match="*" mode="matchScore" as="xs:double" priority="100">
 		<xsl:param name="compareNode" as="element()"/>
 		
@@ -30,21 +49,8 @@
 				<!--<xsl:message>no match: {name(.)}, {name($compareNode)}</xsl:message>-->
 				<xsl:sequence select="0.0"/>
 			</xsl:when>
-			<xsl:otherwise>
-				<xsl:next-match>
-					<xsl:with-param name="compareNode" select="$compareNode"/>
-				</xsl:next-match>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-	
-	
-	<xsl:template match="*[@dsd:hash]" mode="matchScore" as="xs:double" priority="40">
-		<xsl:param name="compareNode" as="element()"/>
-		
-		<xsl:choose>
-			<xsl:when test="@dsd:hash = $compareNode/@dsd:hash">
-				<!-- perfect match! -->
+			<xsl:when test="$baseClass1 = 'topic/body'">	<!-- don't use $CLASS_BODY here since it has spaces before and after -->
+				<!-- bodies can be compared - no matter of the specialization -->
 				<xsl:sequence select="1.0"/>
 			</xsl:when>
 			<xsl:otherwise>
@@ -133,8 +139,9 @@
 		<xsl:choose>
 			<xsl:when test="@dsd:mergeCode = $compareNode/@dsd:mergeCode">
 				<!-- recurse into content -->
-				<!--<xsl:message select="."/>
-				<xsl:message select="$compareNode"/>-->
+				<xsl:if test="empty(node())">
+					<xsl:message>matchScore for <xsl:copy-of select="."/></xsl:message>
+				</xsl:if>
 				<xsl:apply-templates select="node()[1]" mode="#current">
 					<xsl:with-param name="compareNode" select="$compareNode/node()[1]"/>
 				</xsl:apply-templates>

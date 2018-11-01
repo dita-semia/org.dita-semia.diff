@@ -30,6 +30,7 @@
 		</dsd:text>
 	</xsl:template>
 
+
 	<xsl:template match="text()" mode="splitText">
 		<!--
 			Allowed groups:
@@ -79,6 +80,8 @@
 	</xsl:template>
 	
 	<xsl:template match="element()" mode="splitText">
+		<xsl:param name="relevantTextClasses"	as="xs:string*" tunnel="yes"/>
+
 		<xsl:variable name="content" as="node()*">
 			<xsl:choose>
 				<xsl:when test="node()">
@@ -90,9 +93,20 @@
 			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="attrHashList" as="xs:integer*">
-			<xsl:apply-templates select="@class | @id | @href" mode="getHash"/>
+			<xsl:choose>
+				<xsl:when test="exists($relevantTextClasses)">
+					<!-- create hash only from relevant class entries -->  
+					<xsl:sequence select="for $i in tokenize(@class, '\s+')[. = $relevantTextClasses] return dsd:getHashFromString($i)"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:apply-templates select="@class" mode="getHash"/>		
+				</xsl:otherwise>
+			</xsl:choose>
+			<xsl:apply-templates select="@id | @href" mode="getHash"/>
 		</xsl:variable>
-		<xsl:variable name="mergeCode" 		as="xs:integer"	select="dsd:getHashFromSequence((name(.), $attrHashList))"/>
+
+		<!-- use the element name for hash code only when there is no class attribute -->
+		<xsl:variable name="mergeCode" 		as="xs:integer"	select="dsd:getHashFromSequence((if (empty(@class)) then name(.) else (), $attrHashList))"/>
 		<xsl:variable name="currElement" 	as="element()" 	select="."/>
 		
 		<xsl:for-each select="$content">
@@ -100,7 +114,7 @@
 				<xsl:copy-of select="$currElement/attribute() except $currElement/@dsd:*"/>
 				<xsl:copy-of select="$currElement/@dsd:atomic"/>
 				<xsl:if test="@dsd:hash">
-					<xsl:attribute name="dsd:hash" select="dsd:getHashFromSequence(($mergeCode, @dsd:hash))"/>
+					<xsl:attribute name="dsd:hash" select="if ($mergeCode = 0) then @dsd:hash else dsd:getHashFromSequence(($mergeCode, @dsd:hash))"/>
 				</xsl:if>
 				<xsl:attribute name="dsd:size"		select="max((@dsd:size, 1))"/>
 				<xsl:attribute name="dsd:mergeCode" select="$mergeCode"/>
@@ -141,14 +155,14 @@
 	
 	<xsl:template name="mergeInlineElements">
 		<xsl:param name="nodes"	as="element()*"/>
-		
-		<xsl:for-each-group select="$nodes" group-adjacent="string(@dsd:mergeCode)">
+
+		<xsl:for-each-group select="$nodes" group-adjacent="concat(string(@dsd:mergeCode), exists(self::dsd:text))">
 			<xsl:choose>
 				<xsl:when test="self::dsd:text">
 					<!-- don't merge yet to keep marking -->
 					<xsl:copy-of select="current-group()"/>
 				</xsl:when>
-				<xsl:when test="current-grouping-key() = ''">
+				<xsl:when test="empty(@dsd:mergeCode)">
 					<xsl:copy-of select="current-group()"/>	<!-- content is already merged -->
 				</xsl:when>
 				<xsl:otherwise>
@@ -329,5 +343,5 @@
 			</xsl:analyze-string>
 		</xsl:document>
 	</xsl:template>
-	
+
 </xsl:stylesheet>

@@ -14,7 +14,7 @@
 		</body>
 	</prev>
 	<result>
-		<body>
+		<body xmlns:dsd="http://www.dita-semia.org/diff">
 			<p class="- topic/p " id="1">1 <i rev="dsd:added">2</i><ph class="- topic/ph " rev="dsd:deleted">2</ph> 3</p>
 		</body>
 	</result>

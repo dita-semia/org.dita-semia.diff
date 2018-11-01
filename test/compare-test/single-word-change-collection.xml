@@ -28,7 +28,7 @@
 		</body>
 	</prev>
 	<result>
-		<body>
+		<body xmlns:dsd="http://www.dita-semia.org/diff">
 			<p id="1">T<ph class="- topic/ph " rev="dsd:added">e</ph>xt identical content ch<ph class="- topic/ph " rev="dsd:added">a</ph>nged</p>
 			<p id="2">Text<ph class="- topic/ph " rev="dsd:deleted">x</ph></p>
 			<p id="3">Text<ph class="- topic/ph " rev="dsd:deleted">texttexttext</ph></p>

@@ -13,6 +13,9 @@
 	
 	
 	<xsl:template match="*" mode="added">
+		<xsl:param name="content"		as="node()*">
+			<xsl:apply-templates select="node()" mode="addedContent"/>
+		</xsl:param>
 		<xsl:param name="isTextMode" 	as="xs:boolean?"	select="false()" tunnel="yes"/>
 
 		<xsl:copy>
@@ -22,13 +25,11 @@
 				<xsl:when test="not($isTextMode) or (empty(@dsd:mergeCode))">
 					<xsl:call-template name="changedContent">
 						<xsl:with-param name="isAdded" select="true()"/>
-						<xsl:with-param name="content" as="node()*">
-							<xsl:apply-templates select="node()" mode="deletedContent"/>
-						</xsl:with-param>
+						<xsl:with-param name="content" select="$content"/>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:apply-templates select="node()" mode="addedContent"/>
+					<xsl:sequence select="$content"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:copy>
@@ -52,6 +53,9 @@
 	<xsl:mode name="deletedContent" 	on-no-match="shallow-copy"/>
 
 	<xsl:template match="*" mode="deleted">
+		<xsl:param name="content"		as="node()*">
+			<xsl:apply-templates select="node()" mode="deletedContent"/>
+		</xsl:param>
 		<xsl:param name="isTextMode" 	as="xs:boolean?"	select="false()" tunnel="yes"/>
 
 		<xsl:copy>
@@ -61,13 +65,11 @@
 				<xsl:when test="not($isTextMode) or (empty(@dsd:mergeCode))">
 					<xsl:call-template name="changedContent">
 						<xsl:with-param name="isAdded" select="false()"/>
-						<xsl:with-param name="content" as="node()*">
-							<xsl:apply-templates select="node()" mode="deletedContent"/>
-						</xsl:with-param>
+						<xsl:with-param name="content" select="$content"/>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:apply-templates select="node()" mode="deletedContent"/>
+					<xsl:sequence select="$content"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:copy>

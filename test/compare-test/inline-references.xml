@@ -4,13 +4,15 @@
 -->
 <root protectTextMatchSize="0" doSingleWordCompare="false">
 	<curr>
-		<p>111 <image href="image1"/> 222 <xref href="../x.xml#1">Link Text 1</xref> 333 <xref href="../x.xml#2">Link Text 2</xref></p>
+		<p>111 <image href="image1"/> 222 <xref class="- topic/xref " href="../x.xml#1">Link Text 1</xref> 333 <xref class="- topic/xref " href="../x.xml#2">Link Text 2</xref></p>
+		<!--<p>1 <xref class="- topic/xref " href="../x.xml#1">Link Text 1</xref></p>-->
 	</curr>
 	<prev>
-		<p>111 <image href="image1"/> 22 <xref href="../x.xml#1">Link Text</xref> 333 <xref href="../y.xml#2">Link Text 2</xref></p>
+		<p>111 <image href="image1"/> 22 <xref class="- topic/xref " href="../x.xml#1">Link Text</xref> 333 <xref class="- topic/xref " href="../y.xml#2">Link Text 2</xref></p>
+		<!--<p>1 <xref class="- topic/xref " href="../x.xml#1">Link Text</xref></p>-->
 	</prev>
 	<result>
-		<p>111 <image href="image1"/> <ph class="- topic/ph " rev="dsd:added">222</ph><ph class="- topic/ph " rev="dsd:deleted">22</ph> <xref href="../x.xml#1">Link Text<ph class="- topic/ph " rev="dsd:added"> 1</ph></xref> 333 <xref href="../x.xml#2" rev="dsd:added">Link Text 2</xref><xref href="../y.xml#2" rev="dsd:deleted">Link Text 2</xref></p>
+		<p>111 <image href="image1"/> <ph class="- topic/ph " rev="dsd:added">222</ph><ph class="- topic/ph " rev="dsd:deleted">22</ph> <xref class="- topic/xref " href="../x.xml#1">Link Text<ph class="- topic/ph " rev="dsd:added"> 1</ph></xref> 333 <xref class="- topic/xref " href="../x.xml#2" rev="dsd:added">Link Text 2</xref><xref class="- topic/xref " href="../y.xml#2" rev="dsd:deleted">Link Text 2</xref></p>
 	</result>
 </root>
 

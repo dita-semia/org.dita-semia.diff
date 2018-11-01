@@ -11,7 +11,7 @@
 		<li><i>111</i> <i>222</i> 333</li>
 	</prev>
 	<result>
-		<li><i>111</i> <i>222</i><ph class="- topic/ph " rev="dsd:deleted"> 333</ph></li>
+		<li xmlns:dsd="http://www.dita-semia.org/diff"><i>111</i> <i>222</i><ph class="- topic/ph " rev="dsd:deleted"> 333</ph></li>
 	</result>
 </root>
 

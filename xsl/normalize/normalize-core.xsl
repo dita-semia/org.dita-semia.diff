@@ -143,6 +143,7 @@
 	
 	<xsl:template match="*[contains(@class, $CLASS_IMAGE)]/@href" mode="normalize">
 		<xsl:copy/> 
+
 		<!-- add another attribute for the hash of the referenced file -->
 		<xsl:variable name="refUri" as="xs:anyURI" select="if (parent::*/@xtrf) then resolve-uri(., parent::*/@xtrf) else resolve-uri(., base-uri())"/>
 		<xsl:attribute name="dsd:refHashCode" select="dsd:getHashFromFile($refUri)"/>

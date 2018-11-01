@@ -3,15 +3,46 @@
 	xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" id="x3z_5m2_sbb">
 	<title>Appendix</title>
 	<body>
+		<section id="FZS-PHF-CFB">
+			<title>Matching Elements</title>
+			<p id="OY5-K2M-CFB">The longest-common-subsequenced is calculated to find the best allignment – not prioritized by the number of elements but by the length of the content. Elements with
+				same base-class are first matched by their ids:</p>
+			<sl id="GZS-PHF-CFB">
+				<sli id="EXL-22M-CFB">Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</sli>
+				<sli id="HZS-PHF-CFB">Lorem</sli>
+				<sli id="BCJ-22M-CFB">Ipsum</sli>
+				<sli id="S1R-22M-CFB">Sed diam</sli>
+				<sli id="H25-22M-CFB">Voluptua.</sli>
+				<sli id="FLD-22M-CFB">Eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</sli>
+			</sl>
+			<p id="LNG-K2M-CFB">Elements are also matched by equalty. So identical elements are alligned even when there is no id attribute:</p>
+			<sl id="A2F-FHM-CFB">
+				<sli>dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</sli>
+				<sli>Lorem</sli>
+				<sli>ipsum</sli>
+				<sli>sed diam</sli>
+				<sli>voluptua.</sli>
+				<sli>eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</sli>
+			</sl>
+			<p id="BQK-L2M-CFB">But there is no matching by similarity. So when elements are reorganized and modified the allignment no more works:</p>
+			<sl id="C5V-S2M-CFB">
+				<sli>Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</sli>
+				<sli>Lorems</sli>
+				<sli>Ipsum</sli>
+				<sli>Sed diam</sli>
+				<sli>Voluptua.</sli>
+				<sli>Eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</sli>
+			</sl>
+		</section>
 		<section id="AM1-PXX-BDB">
 			<title>Image</title>
-			<fig>
-				<title>Changed Image</title>
-				<image href="dita-logo.png" id="XGD-LZX-BDB" width="10cm"/>
-			</fig>
 			<fig id="NSP-TN2-LDB">
 				<title>Deleted Image</title>
 				<image href="dita-logo.png" width="10cm" id="VP4-5N2-LDB"/>
+			</fig>
+			<fig id="FTK-KKM-CFB">
+				<title>Changed Image</title>
+				<image href="dita-logo.png" id="XGD-LZX-BDB" width="10cm"/>
 			</fig>
 		</section>
 		<section id="Y1M-NZX-BDB">
@@ -97,6 +128,7 @@
 				<li id="JKY-114-HDB">
 					<p id="O11-KLM-JDB">Different text: Just some words.</p>
 				</li>
+				<li id="DQH-KCD-DFB"><ph>Changed tagging</ph> with ph-element won't be highlighted.</li>
 				<li id="XJG-V5N-HDB">
 					<p id="GBG-KLM-JDB">Longer text with multiple changes: You see some text here with words that might make no sense but they are just to test the compare algorithm.</p>
 				</li>
@@ -131,5 +163,46 @@
 				<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"/>
 			</svg>
 			</svg-container></section>
+		<section id="U1Y-15F-CFB">
+			<title>Tables</title>
+			<p id="UMR-3FM-CFB">Table columns are matched by alligning the elements of the first row. Added columns for deleted rows and deleted columns for added rows are completed as blank cells.
+				(The colname is normalized during the DITA-OT preprocessing so this information can not be used for matching the columns.)</p>
+			<table frame="all" rowsep="1" colsep="1" id="WYC-C5F-CFB">
+				<tgroup cols="3">
+					<colspec colname="c1" colnum="1" colwidth="1*"/>
+					<colspec colname="newCol2" colnum="2" colwidth="1*"/>
+					<colspec colname="c3" colnum="3" colwidth="1*"/>
+					<thead>
+						<row id="XYC-C5F-CFB">
+							<entry id="col1">Column 1</entry>
+							<entry id="colx">Column x</entry>
+							<entry id="col3">Column 3</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row id="YYC-C5F-CFB">
+							<entry>1.1</entry>
+							<entry>1.x</entry>
+							<entry>1.3</entry>
+						</row>
+						<row id="MZF-VKG-CFB">
+							<entry>x.1</entry>
+							<entry>x.x</entry>
+							<entry>x.3</entry>
+						</row>
+						<row id="ZYC-C5F-CFB">
+							<entry>2.1</entry>
+							<entry>2.x</entry>
+							<entry>2.3</entry>
+						</row>
+						<row id="AZC-C5F-CFB">
+							<entry>3.1</entry>
+							<entry>3.x</entry>
+							<entry>3.3</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
 	</body>
 </topic>

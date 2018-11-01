@@ -30,7 +30,7 @@
 		<xsl:param name="indent" 		as="xs:string?"/>
 		<xsl:param name="singleIndent" 	as="xs:string"	select="'&#x09;'" tunnel="yes"/>
 		
-		<xsl:copy copy-namespaces="false">
+		<xsl:copy>
 			<xsl:apply-templates select="attribute()" mode="#current">
 				<xsl:with-param name="outputUri" select="$outputUri"/>
 			</xsl:apply-templates>
