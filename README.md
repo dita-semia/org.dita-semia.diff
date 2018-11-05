@@ -1,5 +1,5 @@
 # org.dita-semia.diff
-DITA-OT plugin to reate a diff of a DITA document with a previous version of the same document.
+DITA-OT plugin to create a diff of a DITA document with a previous version of the same document.
 
 You can find here as a sample the comparision result for a bookmap (generated with org.dita-semia.pdf plugin): [_diff-test.pdf](https://github.com/dita-semia/org.dita-semia.diff/blob/master/test/v1.1/out/pdf/_diff-test.pdf)
 
