@@ -1,5 +1,5 @@
 # org.dita-semia.diff
-DITA-OT plugin to reate a diff of a DITA document with a previous version of the same document.
+DITA-OT plugin to create a diff of a DITA document with a previous version of the same document.
 
 You can find here as a sample the comparision result for a bookmap (generated with org.dita-semia.pdf plugin): [_diff-test.pdf](https://github.com/dita-semia/org.dita-semia.diff/blob/master/test/v1.1/out/pdf/_diff-test.pdf)
 
@@ -21,6 +21,22 @@ The testing is done with PDF transtype. (For additional features like marking th
 
 It works with single topics as well as with maps and bookmaps. Note, that when a topic has been moved it will be makred as deleted in the previous places and be marked as added in the new place
 Referenced images as well as embedded SVG graphics are handled as well: When there is any difference the previous one will be added as deleted and the current one marked as added. So there is no highlighting of the difference within the image.
+
+## Special Features:
+- Fully integrated into DITA-OT.
+- Handle complete Maps including images.
+- Compare during preprocess generated content (e.g. conref, keyref). 
+- Created variants based on a single resolved file.
+- Compare images.
+- Compare words on character level.
+- Merge changes in highly modified text.
+- Handle added/deleted columns androws in tables.
+
+
+## Maintainance/Compatibility:
+I'm using for our commercial publications. Thus, it is continiously maintained when . However, I'm not using github as main versioning system and will only occasionally this repository since I'm not aware of anybody else actually using it. So if you're interested in more frequent updates just let me know.
+
+Also note that I'm not doing any testing with different DITA-OT version. Currently I'm using DITA-OT 2.4 so this is the only version I'm sure it is compatible with. But I expect little to no modification sbeing required to make it work at least with newer versions.
 
 
 ### Parameters for Resolve-for-Diff

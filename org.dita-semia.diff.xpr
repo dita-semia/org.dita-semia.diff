@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="20.0">
+<project version="18.1">
     <meta>
         <filters directoryPatterns="" filePatterns="org.dita-semia.diff.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="20.0" xml:space="preserve">
+            <serialized version="18.1" xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>custom.transformation.engines.types</String>
@@ -57,7 +57,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>test/compare-test/nested-inline-references.xml</String>
+                                    <String>test/compare-test/keyword.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -72,22 +72,22 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>test/compare-test/inline-references.xml</String>
+                                    <String>test/compare-test/_test-list.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>Ccompare Test</String>
+                                        <String>do-all-tests</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>XSL</String>
+                                        <String>XML</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>test/compare-test/compare-test.xsl</String>
+                                    <String>test/compare-test/specialized.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -117,7 +117,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>test/compare-test/temp.xml</String>
+                                    <String>test/compare-test/topicref.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -127,111 +127,6 @@
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>xsl/compare/matchScore.xsl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Ccompare Test</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/highlighting/_highlighting-test.ditamap</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>DITA Map PDF - Copy</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>DITAMAP</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/compare-test/unwrap-xref.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Ccompare Test</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/v1.1/_diff-test.ditamap</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>DITA-SEMIA Map PDF - Filtered Diff to v1.0</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>DITAMAP</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/v1.0/_diff-test.ditamap</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>DITA-SEMIA Resolved for Diff</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>DITAMAP</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>preprocess-diff.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>DITA-SEMIA Map PDF - Diff</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>DITAMAP</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/compare-test/do-all-tests.xsl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>do-all-tests</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XML</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
@@ -282,6 +177,66 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>test/compare-test/single-word-change-collection.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/p-without-id.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/p-with-id.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/compare-test.xsl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>test/compare-test/single-word-change.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -292,6 +247,231 @@
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/v1.1/_diff-test.ditamap</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>DITA-SEMIA Map PDF - Diff to v1.0</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>DITAMAP</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/v1.1/temp/dita-semia-pdf/_diff-test.ditamap</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>_diff-test (PDF2)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>DITAMAP</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>xsl/compare/matchScore.xsl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/ignore-wrap-change.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>preprocess-diff.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>DITA-SEMIA Map PDF - Diff</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>DITAMAP</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>../../../../../../TEMP/Diff-Test.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/nested-inline-elements.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/changed-inline-wrapping.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/inline-PIs.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/inline-references.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/nested-inline-references.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/temp.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/highlighting/_highlighting-test.ditamap</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>DITA Map PDF - Copy</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>DITAMAP</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/unwrap-xref.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Ccompare Test</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>test/compare-test/do-all-tests.xsl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>do-all-tests</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
@@ -327,97 +507,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>test/compare-test/single-word-change-collection.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Ccompare Test</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/compare-test/p-with-id.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Ccompare Test</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/compare-test/topicref.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Ccompare Test</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/compare-test/inline-PIs.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Ccompare Test</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>test/compare-test/image.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Ccompare Test</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/compare-test/nested-inline-elements.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Ccompare Test</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>test/compare-test/changed-inline-wrapping.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -648,7 +738,7 @@
                                                 <field name="addCommentsForValidationErrors">
                                                     <Boolean>true</Boolean>
                                                 </field>
-                                                <field name="streamingEnabled">
+                                                <field name="generateByteCode">
                                                     <Boolean>false</Boolean>
                                                 </field>
                                                 <field name="allowCallsOnExtensionFunctions">
@@ -656,9 +746,6 @@
                                                 </field>
                                                 <field name="registerSaxonCEExtensions">
                                                     <Boolean>true</Boolean>
-                                                </field>
-                                                <field name="enableAssertions">
-                                                    <Boolean>false</Boolean>
                                                 </field>
                                                 <field name="showVersionWarnings">
                                                     <Boolean>false</Boolean>
@@ -690,8 +777,8 @@
                                                 <field name="stripWS">
                                                     <String>saxon.strip.ws.none</String>
                                                 </field>
-                                                <field name="optimizationEnabled">
-                                                    <Boolean>true</Boolean>
+                                                <field name="optimizationLevel">
+                                                    <String>0</String>
                                                 </field>
                                                 <field name="useConfigFile">
                                                     <Boolean>true</Boolean>
@@ -737,8 +824,8 @@
                                                 <field name="stripWS">
                                                     <String>saxon.strip.ws.none</String>
                                                 </field>
-                                                <field name="optimizationEnabled">
-                                                    <Boolean>true</Boolean>
+                                                <field name="optimizationLevel">
+                                                    <String>0</String>
                                                 </field>
                                                 <field name="useConfigFile">
                                                     <Boolean>true</Boolean>
@@ -907,9 +994,6 @@
                                     <null/>
                                 </field>
                                 <field name="webhelpResponsiveTemplate">
-                                    <null/>
-                                </field>
-                                <field name="publishingTemplateDataPO">
                                     <null/>
                                 </field>
                                 <field name="additionalAntArgs">
@@ -1264,9 +1348,6 @@
                                 <field name="webhelpResponsiveTemplate">
                                     <null/>
                                 </field>
-                                <field name="publishingTemplateDataPO">
-                                    <null/>
-                                </field>
                                 <field name="additionalAntArgs">
                                     <String></String>
                                 </field>
@@ -1550,9 +1631,6 @@
                                     <null/>
                                 </field>
                                 <field name="webhelpResponsiveTemplate">
-                                    <null/>
-                                </field>
-                                <field name="publishingTemplateDataPO">
                                     <null/>
                                 </field>
                                 <field name="additionalAntArgs">
@@ -1886,9 +1964,6 @@
                                 <field name="webhelpResponsiveTemplate">
                                     <null/>
                                 </field>
-                                <field name="publishingTemplateDataPO">
-                                    <null/>
-                                </field>
                                 <field name="additionalAntArgs">
                                     <String></String>
                                 </field>
@@ -2220,9 +2295,6 @@
                                 <field name="webhelpResponsiveTemplate">
                                     <null/>
                                 </field>
-                                <field name="publishingTemplateDataPO">
-                                    <null/>
-                                </field>
                                 <field name="additionalAntArgs">
                                     <String></String>
                                 </field>
@@ -2485,9 +2557,6 @@
                                 <field name="webhelpResponsiveTemplate">
                                     <null/>
                                 </field>
-                                <field name="publishingTemplateDataPO">
-                                    <null/>
-                                </field>
                                 <field name="additionalAntArgs">
                                     <String></String>
                                 </field>
@@ -2660,6 +2729,198 @@
                                     <String-array/>
                                 </field>
                             </ditaScenario>
+                            <ditaScenario>
+                                <field name="useXEP">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="useAntennaHouse">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="baseDir">
+                                    <String>${cfd}</String>
+                                </field>
+                                <field name="outputDir">
+                                    <String>${cfd}/out/pdf</String>
+                                </field>
+                                <field name="tempDir">
+                                    <String>${cfd}/temp/pdf</String>
+                                </field>
+                                <field name="transtype">
+                                    <String>pdf2</String>
+                                </field>
+                                <field name="filters">
+                                    <ditavalFilters>
+                                        <field name="useDitavalFilePath">
+                                            <Boolean>true</Boolean>
+                                        </field>
+                                        <field name="useAppliedConditionSet">
+                                            <Boolean>false</Boolean>
+                                        </field>
+                                        <field name="appliedConditionSet">
+                                            <null/>
+                                        </field>
+                                        <field name="ditavalFilePath">
+                                            <String>file:/${pd}/test/diff-highlight.ditaval</String>
+                                        </field>
+                                        <field name="simpleFiltersList">
+                                            <list/>
+                                        </field>
+                                    </ditavalFilters>
+                                </field>
+                                <field name="addOxygenJars">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="skinCssFile">
+                                    <null/>
+                                </field>
+                                <field name="lastCustomSkinCssPath">
+                                    <null/>
+                                </field>
+                                <field name="webhelpResponsiveTemplate">
+                                    <null/>
+                                </field>
+                                <field name="additionalAntArgs">
+                                    <String></String>
+                                </field>
+                                <field name="buildTarget">
+                                    <String></String>
+                                </field>
+                                <field name="buildFilePath">
+                                    <String></String>
+                                </field>
+                                <field name="ditaParams">
+                                    <list>
+                                        <ditaParameter>
+                                            <field name="name">
+                                                <String>dita-semia.diff-prev-url</String>
+                                            </field>
+                                            <field name="description">
+                                                <String></String>
+                                            </field>
+                                            <field name="value">
+                                                <String>file:${pd}/test/previous-versions/_diff-test-v1.0.zip</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <null/>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>5</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </ditaParameter>
+                                    </list>
+                                </field>
+                                <field name="jvmArgs">
+                                    <String>-Xmx384m</String>
+                                </field>
+                                <field name="useCustomJavaHome">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="customJavaHomeDir">
+                                    <String></String>
+                                </field>
+                                <field name="useCustomANTHome">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="customANTHomeDir">
+                                    <String></String>
+                                </field>
+                                <field name="workingDir">
+                                    <null/>
+                                </field>
+                                <field name="showConsoleAlways">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="advancedOptionsMap">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>_diff-test (PDF2)</String>
+                                </field>
+                                <field name="baseURL">
+                                    <null/>
+                                </field>
+                                <field name="footerURL">
+                                    <null/>
+                                </field>
+                                <field name="fOPMethod">
+                                    <null/>
+                                </field>
+                                <field name="fOProcessorName">
+                                    <null/>
+                                </field>
+                                <field name="headerURL">
+                                    <null/>
+                                </field>
+                                <field name="inputXSLURL">
+                                    <null/>
+                                </field>
+                                <field name="inputXMLURL">
+                                    <null/>
+                                </field>
+                                <field name="defaultScenario">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="isFOPPerforming">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="type">
+                                    <String>DITAMAP</String>
+                                </field>
+                                <field name="saveAs">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="openInBrowser">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="outputFile">
+                                    <null/>
+                                </field>
+                                <field name="outputResource">
+                                    <null/>
+                                </field>
+                                <field name="openOtherLocationInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="locationToOpenInBrowserURL">
+                                    <String></String>
+                                </field>
+                                <field name="openInEditor">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInHTMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInXMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInSVGPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInResultSetPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="useXSLTInput">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="xsltParams">
+                                    <list/>
+                                </field>
+                                <field name="cascadingStylesheets">
+                                    <String-array/>
+                                </field>
+                                <field name="xslTransformer">
+                                    <String>DITA-OT</String>
+                                </field>
+                                <field name="extensionURLs">
+                                    <String-array/>
+                                </field>
+                            </ditaScenario>
                             <scenario>
                                 <field name="advancedOptionsMap">
                                     <serializableOrderedMap>
@@ -2696,8 +2957,8 @@
                                                 <field name="stripWS">
                                                     <String>saxon.strip.ws.none</String>
                                                 </field>
-                                                <field name="optimizationEnabled">
-                                                    <Boolean>true</Boolean>
+                                                <field name="optimizationLevel">
+                                                    <String>0</String>
                                                 </field>
                                                 <field name="useConfigFile">
                                                     <Boolean>true</Boolean>

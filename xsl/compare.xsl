@@ -20,6 +20,8 @@
 	<xsl:param name="protectTextMatchSize"	as="xs:integer" select="30"/>
 	<xsl:param name="protectTextMatchRatio"	as="xs:double" 	select="0.3"/>
 	<xsl:param name="doSingleWordCompare"	as="xs:boolean" select="true()"/>
+	<xsl:param name="relevantTextClasses"	as="xs:string" 	select="'hi-d/i, hi-d/b, hi-d/u, pr-d/codeph'"/>
+	
 
 
 	<xsl:include href="common/consts.xsl"/>
@@ -29,6 +31,7 @@
 	<xsl:include href="compare/matchScore.xsl"/>
 	<xsl:include href="compare/processMatch.xsl"/>
 	<xsl:include href="compare/text.xsl"/>
+	<xsl:include href="compare/tables.xsl"/>
 	<xsl:include href="compare/marking.xsl"/>
 	<xsl:include href="compare/write.xsl"/>
 	
@@ -42,7 +45,9 @@
 			<xsl:with-param name="doc2Uri"				select="xs:anyURI($prevUriNormalized)"/>
 			<xsl:with-param name="outputUri"			select="xs:anyURI(concat(base-uri(.), $tmpUriSuffix))"/>
 			<xsl:with-param name="isRoot"				select="true()"/>
-			<xsl:with-param name="doSingleWordCompare"	select="$doSingleWordCompare" tunnel="yes"/>
+			<xsl:with-param name="doSingleWordCompare"	select="$doSingleWordCompare" 						tunnel="yes"/>
+			<xsl:with-param name="relevantTextClasses"	select="tokenize($relevantTextClasses, '[,\s]+')" 	tunnel="yes"/>
+			
 		</xsl:call-template>
 	</xsl:template>
 	
@@ -84,12 +89,22 @@
 	</xsl:template>
 	
 	
-	<xsl:template name="compareContent">
-		<xsl:param name="parent1"	as="node()"/>
+	<xsl:template match="document-node() | element()" mode="compareContent">
 		<xsl:param name="parent2"	as="node()"/>
+		
+		<xsl:call-template name="compareContent">
+			<xsl:with-param name="parent1" select="."/>
+			<xsl:with-param name="parent2" select="$parent2"/>
+		</xsl:call-template>
+	</xsl:template>
+	
+	
+	<xsl:template name="compareContent">
+		<xsl:param name="parent1"		as="node()"/>
+		<xsl:param name="parent2"		as="node()"/>
 		<xsl:param name="isTextMode"	as="xs:boolean" select="false()" tunnel="yes"/>
 		
-		<!--<xsl:message>compareContent ({$isTextMode}): {$parent1/node()}, {$parent2/node()}</xsl:message>-->
+		<!--<xsl:message>compareContent ({$isTextMode}): {name($parent1)}, {name($parent2)}</xsl:message>-->
 		
 		<xsl:choose>
 			
@@ -106,6 +121,7 @@
 			</xsl:when>
 
 			<xsl:when test="($parent1/@dsd:text) or ($parent2/@dsd:text) or ($isTextMode)">
+				<!--<xsl:message>compareContent on {name($parent1)} ({$isTextMode}): p1-text: {$parent1/@dsd:text}, p2-text: {$parent2/@dsd:text}</xsl:message>-->	
 				<xsl:variable name="textParent1" as="element()">
 					<dsd:textParent>
 						<xsl:attribute name="xml:base" select="base-uri($parent1)"/>
@@ -125,6 +141,10 @@
 						<xsl:with-param name="isTextMode"	select="true()" 		tunnel="yes"/>
 					</xsl:call-template>
 				</xsl:variable>
+				<!--<xsl:message>-\-\-\-\-\-\-\-</xsl:message>
+				<xsl:message select="$textParent1"/>
+				<xsl:message select="$textParent2"/>
+				<xsl:message select="$comparedContent"/>-->
 
 				<xsl:call-template name="unsplitText">
 					<xsl:with-param name="nodes" select="$comparedContent"/>
@@ -194,9 +214,13 @@
 				</xsl:call-template>
 				
 				<!-- handle matching node -->
-				<xsl:apply-templates select="$parent1/node()[$currPos1]" mode="processMatch">
-					<xsl:with-param name="matchNode" select="$parent2/node()[$currPos2]"/>
-				</xsl:apply-templates>
+				<xsl:variable name="matchResult" as="node()">
+					<xsl:apply-templates select="$parent1/node()[$currPos1]" mode="processMatch">
+						<xsl:with-param name="matchNode" select="$parent2/node()[$currPos2]"/>
+					</xsl:apply-templates>
+				</xsl:variable>
+				<xsl:sequence select="$matchResult"/>
+				<!--<xsl:message>matchResult: <xsl:sequence select="$matchResult"/></xsl:message>-->
 				
 				
 				<!-- recurse -->

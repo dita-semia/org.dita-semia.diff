@@ -14,4 +14,7 @@
 	<test>embedded-svg.xml</test>
 	<test>data.xml</test>
 	<test>topicref.xml</test>
+	<test>specialized.xml</test>
+	<test>ignore-wrap-change.xml</test>
+	<test>keyword.xml</test>
 </list>

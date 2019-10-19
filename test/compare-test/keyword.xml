@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	mixed content with PIs
+-->
+<root protectTextMatchSize="0">
+	<curr>
+		<p>Software version <keyword class="- topic/keyword " keyref="VersionNumber">1.1</keyword></p>
+	</curr>
+	<prev>
+		<p>Software version <keyword class="- topic/keyword " keyref="VersionNumber">1.0</keyword></p>
+	</prev>
+	<result>
+		<p>Software version <keyword class="- topic/keyword " keyref="VersionNumber">1.<ph class="- topic/ph " rev="dsd:added">1</ph><ph class="- topic/ph " rev="dsd:deleted">0</ph></keyword></p>
+	</result>
+</root>
+

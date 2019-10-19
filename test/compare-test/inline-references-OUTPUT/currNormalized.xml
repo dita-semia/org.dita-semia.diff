@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CurrNormalized>
-	<p xmlns:dsd="http://www.dita-semia.org/diff" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/compare-test/inline-references.xml" dsd:hash="-146373943" dsd:size="37" dsd:text="true">111 <image dsd:hash="1247634672" dsd:size="1" href="image1"/> 222 <xref dsd:hash="-488191808" dsd:size="11" href="../x.xml#1">Link Text 1</xref> 333 <xref dsd:hash="-488191778" dsd:size="11" href="../x.xml#2">Link Text 2</xref></p>
+	<p xmlns:dsd="http://www.dita-semia.org/diff" xml:base="file:/D:/SVN/SAIP/Doku-Framework/DITA-OT/plugins/org.dita-semia.diff/test/compare-test/inline-references.xml" dsd:hash="453788044" dsd:size="37" dsd:text="true">111 <image dsd:hash="1247634672" dsd:size="1" href="image1"/> 222 <xref dsd:hash="673084821" dsd:size="11" class="- topic/xref " href="../x.xml#1">Link Text 1</xref> 333 <xref dsd:hash="673084851" dsd:size="11" class="- topic/xref " href="../x.xml#2">Link Text 2</xref></p>
 </CurrNormalized>

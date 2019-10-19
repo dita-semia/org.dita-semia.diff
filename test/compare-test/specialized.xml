@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	All elements have ids
+-->
+<root>
+	<curr>
+		<body>
+			<p class="- topic/p " id="1">1 <i>2</i> 3</p>
+		</body>
+	</curr>
+	<prev>
+		<body>
+			<spec class="- topic/p custom-c/spec" id="1">1 2 3</spec>
+		</body>
+	</prev>
+	<result>
+		<body xmlns:dsd="http://www.dita-semia.org/diff">
+			<p class="- topic/p " id="1">1 <i rev="dsd:added">2</i><ph class="- topic/ph " rev="dsd:deleted">2</ph> 3</p>
+		</body>
+	</result>
+</root>
+

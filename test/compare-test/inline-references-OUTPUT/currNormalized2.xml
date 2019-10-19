@@ -7,10 +7,10 @@
 		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
 		<dsd:text dsd:hash="49650" dsd:size="3" dsd:mergeCode="0">222</dsd:text>
 		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
-		<xref dsd:hash="-488191808" dsd:size="11" href="../x.xml#1" dsd:atomic="">Link Text 1</xref>
+		<xref dsd:hash="673084821" dsd:size="11" class="- topic/xref " href="../x.xml#1" dsd:atomic="">Link Text 1</xref>
 		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
 		<dsd:text dsd:hash="50643" dsd:size="3" dsd:mergeCode="0">333</dsd:text>
 		<dsd:text dsd:hash="32" dsd:size="1" dsd:mergeCode="0"> </dsd:text>
-		<xref dsd:hash="-488191778" dsd:size="11" href="../x.xml#2" dsd:atomic="">Link Text 2</xref>
+		<xref dsd:hash="673084851" dsd:size="11" class="- topic/xref " href="../x.xml#2" dsd:atomic="">Link Text 2</xref>
 	</dsd:textParent>
 </CurrNormalized2>

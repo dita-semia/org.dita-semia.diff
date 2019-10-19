@@ -25,7 +25,7 @@
 				</xsl:call-template>
 			</xsl:document>
 		</xsl:variable>
-		<xsl:variable name="lcs1" as="element()" select="$matrix/row[last()]/lcs[last()]"/>
+		<xsl:variable name="lcs" as="element()" select="$matrix/row[last()]/lcs[last()]"/>
 		
 		<xsl:if test="$debugOutput">
 			<matrix>
@@ -36,14 +36,14 @@
 		<xsl:choose>
 			<xsl:when test="$isTextMode">
 				<xsl:call-template name="simplifyTextLcs">
-					<xsl:with-param name="lcs" 			select="$lcs1"/>
+					<xsl:with-param name="lcs" 			select="$lcs"/>
 					<xsl:with-param name="parent1"		select="$parent1"/>
 					<xsl:with-param name="parent2"		select="$parent2"/>
 					<xsl:with-param name="debugOutput"	select="$debugOutput"/>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:sequence select="$lcs1"/>
+				<xsl:sequence select="$lcs"/>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>

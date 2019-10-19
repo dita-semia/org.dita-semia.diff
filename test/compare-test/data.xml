@@ -18,7 +18,7 @@
 		</bookmeta>
 	</prev>
 	<result>
-		<bookmeta>
+		<bookmeta xmlns:dsd="http://www.dita-semia.org/diff">
 			<data class="- topic/data " name="data1" rev="dsd:added"/>
 			<data class="- topic/data " name="data0" rev="dsd:deleted"/>
 			<data class="- topic/data " name="data2"><ph class="- topic/ph " rev="dsd:added">new</ph><ph class="- topic/ph " rev="dsd:deleted">old</ph> value</data>
