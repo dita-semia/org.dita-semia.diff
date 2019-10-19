@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dummy>
+	
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement location="plugins/org.dita-semia.image-convert/lib/ant-contrib-1.0b3.jar"/>
+		</classpath>
+	</taskdef>
+	
 	<import file="init.xml"/>
 	<import file="normalize.xml"/>
 	<import file="resolve-for-diff.xml"/>
 	<import file="preprocess-diff.xml"/>
+	
 </dummy>
