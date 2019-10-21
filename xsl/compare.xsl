@@ -212,9 +212,12 @@
 					<xsl:with-param name="added" 	select="$parent1/node()[(position() gt $prevPos1) and (position() lt $currPos1)]"/>
 					<xsl:with-param name="deleted"	select="$parent2/node()[(position() gt $prevPos2) and (position() lt $currPos2)]"/>
 				</xsl:call-template>
-				
+								
+				<!--<xsl:message>processContent: <xsl:value-of select="name($parent1)"/>/<xsl:value-of select="name($parent1/node()[$currPos1])"/>,<xsl:value-of select="$prevPos1"/> : <xsl:value-of select="name($parent2)"/>/<xsl:value-of select="name($parent2/node()[$currPos2])"/>,<xsl:value-of select="$prevPos2"/></xsl:message>
+				<xsl:message select="$parent1"/>-->
+					
 				<!-- handle matching node -->
-				<xsl:variable name="matchResult" as="node()">
+				<xsl:variable name="matchResult" as="node()?">
 					<xsl:apply-templates select="$parent1/node()[$currPos1]" mode="processMatch">
 						<xsl:with-param name="matchNode" select="$parent2/node()[$currPos2]"/>
 					</xsl:apply-templates>
@@ -289,11 +292,12 @@
 			<xsl:apply-templates select="$compareResult" mode="getDelTopicList"/>
 		</xsl:variable>
 		<xsl:if test="exists($delTopicList)">
-			<xsl:variable name="baseUri" as="xs:anyURI" select="xs:anyURI($delTopicListFile)"/>
+			<xsl:variable name="baseUri" as="xs:anyURI" select="xs:anyURI(replace($delTopicListFile, ' ', '%20'))"/>
+			<!--<xsl:message>delTopicListFile: {$delTopicListFile}, baseUri: {$baseUri}</xsl:message>-->
 			<xsl:result-document href="{$delTopicListFile}" method="text">
 				<xsl:for-each select="$delTopicList">
 					<xsl:text>&#x0A;</xsl:text>
-					<xsl:value-of select="dsd:relativizeHref(., $baseUri)"/>
+					<xsl:value-of select="replace(dsd:relativizeHref(., $baseUri), '%20', ' ')"/>
 				</xsl:for-each>
 			</xsl:result-document>
 			<xsl:variable name="jobFileNormalized" as="xs:string" select="replace($jobFile, '\\', '/')"/>
@@ -320,19 +324,20 @@
 		<xsl:param name="delTopicList" 	as="xs:string*" tunnel="yes"/>
 		<xsl:param name="baseUri" 		as="xs:anyURI" 	tunnel="yes"/>
 		
-		<xsl:next-match/>
-		
-		<xsl:for-each select="$delTopicList">
-			<xsl:variable name="relUri" as="xs:string" select="dsd:relativizeHref(., $baseUri)"/>
-			<file>
-				<xsl:attribute name="src"		select="."/>
-				<xsl:attribute name="uri"		select="$relUri"/>
-				<xsl:attribute name="path"		select="$relUri"/>
-				<xsl:attribute name="result"	select="."/>
-				<xsl:attribute name="format"	select="'dita'"/>
-				<xsl:attribute name="target"	select="true()"/>
-			</file>
-		</xsl:for-each>
+		<xsl:copy>
+			<xsl:apply-templates select="attribute() | node()" mode="#current"/>
+			<xsl:for-each select="$delTopicList">
+				<xsl:variable name="relUri" as="xs:string" select="dsd:relativizeHref(., $baseUri)"/>
+				<file>
+					<xsl:attribute name="src"		select="."/>
+					<xsl:attribute name="uri"		select="$relUri"/>
+					<xsl:attribute name="path"		select="$relUri"/>
+					<xsl:attribute name="result"	select="."/>
+					<xsl:attribute name="format"	select="'dita'"/>
+					<xsl:attribute name="target"	select="true()"/>
+				</file>
+			</xsl:for-each>
+		</xsl:copy>
 	</xsl:template>
 	
 </xsl:stylesheet>

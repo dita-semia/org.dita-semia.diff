@@ -52,7 +52,7 @@
 		<xsl:copy>
 			<xsl:if test="(parent::document-node()) or ($setBaseUri)">
 				<xsl:if test="parent::document-node()">
-					<xsl:message>Normalizing file {base-uri()}</xsl:message>
+					<xsl:message>Normalizing {base-uri()}</xsl:message>
 				</xsl:if>
 				<xsl:attribute name="xml:base" select="base-uri()"/>	
 			</xsl:if>
@@ -92,7 +92,8 @@
 						
 						<xsl:otherwise>
 							<xsl:variable name="normalizedRef" as="document-node()?">
-								<xsl:if test="(contains(@class, $CLASS_TOPICREF)) and (string(@href) != '')">
+								<!-- integrate referenced topic unless within a reltable -->
+								<xsl:if test="(contains(@class, $CLASS_TOPICREF)) and (not(ancestor::*[contains(@class, $CLASS_RELTABLE)])) and (string(@href) != '')">
 									<xsl:variable name="refUri" as="xs:anyURI" 			select="resolve-uri(@href, base-uri(.))"/>
 									<xsl:choose>
 										<xsl:when test="doc-available($refUri)">

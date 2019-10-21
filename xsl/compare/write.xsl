@@ -16,10 +16,12 @@
 	
 	<xsl:template match="element()[(@xml:space = 'preserve') or (@dsd:text = true())]" mode="write">
 		<xsl:param name="outputUri" 	as="xs:anyURI"/>
+		<xsl:param name="isDeleted" 	as="xs:boolean?"/>
 		
 		<xsl:copy copy-namespaces="false">
 			<xsl:apply-templates select="attribute(), node()" mode="writeSpacePreserve">
 				<xsl:with-param name="outputUri" 	select="$outputUri"/>
+				<xsl:with-param name="isDeleted"	select="$isDeleted"/>
 			</xsl:apply-templates>
 		</xsl:copy>
 	</xsl:template>
@@ -27,12 +29,14 @@
 	
 	<xsl:template match="element()" mode="write">
 		<xsl:param name="outputUri" 	as="xs:anyURI"/>
+		<xsl:param name="isDeleted" 	as="xs:boolean?"/>
 		<xsl:param name="indent" 		as="xs:string?"/>
 		<xsl:param name="singleIndent" 	as="xs:string"	select="'&#x09;'" tunnel="yes"/>
 		
 		<xsl:copy>
 			<xsl:apply-templates select="attribute()" mode="#current">
-				<xsl:with-param name="outputUri" select="$outputUri"/>
+				<xsl:with-param name="outputUri" 	select="$outputUri"/>
+				<xsl:with-param name="isDeleted"	select="$isDeleted"/>
 			</xsl:apply-templates>
 			
 			<!-- don't do indentation when there is already text content --> 
@@ -44,6 +48,7 @@
 				</xsl:if>
 				<xsl:apply-templates select="." mode="#current">
 					<xsl:with-param name="outputUri" 	select="$outputUri"/>
+					<xsl:with-param name="isDeleted"	select="$isDeleted"/>
 					<xsl:with-param name="indent" 		select="concat($indent, $singleIndent)"/>
 				</xsl:apply-templates>
 			</xsl:for-each>
@@ -55,13 +60,15 @@
 	
 	
 	<xsl:template match="document-node()" mode="write">
-		<xsl:param name="outputUri" as="xs:anyURI"/>
+		<xsl:param name="outputUri"	as="xs:anyURI"/>
+		<xsl:param name="isDeleted" as="xs:boolean?"/>
 		
 		<xsl:copy>
 			<xsl:for-each select="node()">
 				<xsl:value-of select="if (position() > 0) then '&#xA;' else ''"/>
 				<xsl:apply-templates select="." mode="#current">
-					<xsl:with-param name="outputUri" select="$outputUri"/>
+					<xsl:with-param name="outputUri" 	select="$outputUri"/>
+					<xsl:with-param name="isDeleted"	select="$isDeleted"/>
 				</xsl:apply-templates>
 			</xsl:for-each>
 		</xsl:copy>
@@ -74,21 +81,25 @@
 	
 	<xsl:template match="element()" mode="writeSpacePreserve">
 		<xsl:param name="outputUri" as="xs:anyURI"/>
+		<xsl:param name="isDeleted" 	as="xs:boolean?"/>
 		
 		<xsl:copy copy-namespaces="false">
 			<xsl:apply-templates select="attribute(), node()" mode="#current">
-				<xsl:with-param name="outputUri" select="$outputUri"/>
+				<xsl:with-param name="outputUri" 	select="$outputUri"/>
+				<xsl:with-param name="isDeleted"	select="$isDeleted"/>
 			</xsl:apply-templates>
 		</xsl:copy>
 	</xsl:template>
 	
 	
-	<xsl:template match="*[contains(@class, $CLASS_TOPICREF)][not(string(@href) = '')]" mode="write" priority="10">
+	<xsl:template match="*[contains(@class, $CLASS_TOPICREF)][not(ancestor::*[contains(@class, $CLASS_RELTABLE)])][not(string(@href) = '')]" mode="write" priority="10">
 		<xsl:param name="outputUri" as="xs:anyURI"/>
+		<xsl:param name="isDeleted" as="xs:boolean?"/>
 		<xsl:param name="indent" 	as="xs:string?"/>
 		
 		<xsl:next-match>
 			<xsl:with-param name="outputUri" 	select="$outputUri"/>
+			<xsl:with-param name="isDeleted"	select="$isDeleted"/>
 			<xsl:with-param name="indent"		select="$indent"/>
 		</xsl:next-match>
 		
@@ -114,11 +125,25 @@
 									<xsl:apply-templates select="attribute()" mode="#current">
 										<xsl:with-param name="outputUri" select="$dstUri"/>
 									</xsl:apply-templates>
+									<xsl:if test="empty(@xml:base)">
+										<xsl:attribute name="xml:base" select="base-uri(.)"/>
+									</xsl:if>
+									<!--<xsl:variable name="markedContent" as="node()*">
+										<xsl:choose>
+											<xsl:when test="$isAdded">
+												<xsl:sequence select="node()"/>
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:apply-templates select="node()" mode="deletedContent"/>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:variable>-->
 									<xsl:call-template name="changedContent">
 										<xsl:with-param name="isAdded" select="$isAdded"/>
 										<xsl:with-param name="content" as="node()*">
 											<xsl:apply-templates select="node()" mode="#current">
-												<xsl:with-param name="outputUri" select="$dstUri"/>
+												<xsl:with-param name="outputUri" 	select="$dstUri"/>
+												<xsl:with-param name="isDeleted" 	select="not($isAdded)"/>
 											</xsl:apply-templates>
 										</xsl:with-param>
 									</xsl:call-template>
@@ -152,13 +177,28 @@
 		</xsl:choose>
 	</xsl:template>
 	
-	<xsl:template match="*[ancestor-or-self::*/@dsd:change = $CHANGE_DELETED][contains(@class, $CLASS_IMAGE)]/@href[starts-with(., 'file:/')]" mode="write writeSpacePreserve" priority="20">
-		<!-- keep absolute URI beacuse relative URLs will be resolved based on the original URL which -->
-		<xsl:copy/>
+	<xsl:template match="*[contains(@class, $CLASS_IMAGE)]/@href" mode="write writeSpacePreserve" priority="20">
+		<xsl:param name="outputUri" as="xs:anyURI"/>
+		<xsl:param name="isDeleted" as="xs:boolean?"/>
+		
+		<xsl:choose>
+			<xsl:when test="(ancestor-or-self::*/@dsd:change = $CHANGE_DELETED) or $isDeleted">
+				<!-- ensure absolute URI beacuse relative URLs will be resolved based on the original URL which would not work here -->
+				<xsl:attribute name="href" select="resolve-uri(., base-uri(.))"/>
+				<!--<xsl:message>deleted image href resolved to: <xsl:value-of select="resolve-uri(., base-uri(.))"/></xsl:message>-->
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:next-match>
+					<xsl:with-param name="outputUri" 	select="$outputUri"/>
+					<xsl:with-param name="isDeleted" 	select="$isDeleted"/>
+				</xsl:next-match>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 	
 	<xsl:template match="@href[starts-with(., 'file:')]" mode="write writeSpacePreserve" priority="10">
 		<xsl:param name="outputUri" 	as="xs:anyURI"/>
+		<xsl:param name="isDeleted" 	as="xs:boolean?"/>
 		<xsl:param name="rootResult" 	as="document-node()" tunnel="yes"/>
 
 		<xsl:variable name="fixedHref"		as="xs:string"	select="dsd:getFixedHref(., $rootResult)"/>

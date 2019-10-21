@@ -9,6 +9,8 @@
 
 	<xsl:variable name="CLASS_TOPICREF"			as="xs:string"	select="' map/topicref '"/>
 	<xsl:variable name="CLASS_TOPICMETA"		as="xs:string"	select="' map/topicmeta '"/>
+	<xsl:variable name="CLASS_RELTABLE"			as="xs:string"	select="' map/reltable '"/>
+	<xsl:variable name="CLASS_TOPIC"			as="xs:string"	select="' topic/topic '"/>
 	<xsl:variable name="CLASS_METADATA"			as="xs:string"	select="' topic/metadata '"/>
 	<xsl:variable name="CLASS_IMAGE"			as="xs:string"	select="' topic/image '"/>
 	<xsl:variable name="CLASS_XREF"				as="xs:string"	select="' topic/xref '"/>

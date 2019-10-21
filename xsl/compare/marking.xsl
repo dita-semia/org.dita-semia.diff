@@ -98,8 +98,9 @@
 
 	<xsl:template match="@href" mode="added addedContent deleted deletedContent">
 		<xsl:attribute name="href" select="dsd:getResolvedHref(.)"/>
+		<!--<xsl:message>dsd:getResolvedHref({.}) to {dsd:getResolvedHref(.)}</xsl:message>-->
 	</xsl:template>
-	
+		
 	
 	<xsl:mode name="unchanged" on-no-match="shallow-copy"/>
 

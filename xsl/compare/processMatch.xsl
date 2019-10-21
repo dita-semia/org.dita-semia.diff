@@ -66,7 +66,7 @@
 		<xsl:next-match/>
 		<!-- 
 			Add the URI of the node this file should be compared to during write mode.
-			Since the main template is within teh context of a variable xsl:result-document can't be used now.
+			Since the main template is within the context of a variable xsl:result-document can't be used now.
 		-->
 		<xsl:attribute name="dsd:matchHref" select="resolve-uri($matchNode/@href, base-uri($matchNode))"/>
 	</xsl:template>
