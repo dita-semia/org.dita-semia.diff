@@ -19,8 +19,9 @@ When publishing a later version you can activate the comparision preprocessing s
 
 The testing is done with PDF transtype. (For additional features like marking the toc and lot entries the seperate DITA-OT plugin org.dita-semia.pdf is being used.)
 
-It works with single topics as well as with maps and bookmaps. Note, that when a topic has been moved it will be makred as deleted in the previous places and be marked as added in the new place
-Referenced images as well as embedded SVG graphics are handled as well: When there is any difference the previous one will be added as deleted and the current one marked as added. So there is no highlighting of the difference within the image.
+It works with single topics as well as with maps and bookmaps. Note, that when a topic has been moved it will be marked as deleted in the previous places and be marked as added in the new place.
+
+Referenced images and embedded SVG graphics are handled as well: When there is any difference the previous one will be added as deleted and the current one marked as added. So there is no highlighting of the difference within the image.
 
 ## Special Features:
 - Fully integrated into DITA-OT.
