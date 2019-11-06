@@ -3,7 +3,7 @@
 	
 	<taskdef resource="net/sf/antcontrib/antlib.xml">
 		<classpath>
-			<pathelement location="plugins/org.dita-semia.image-convert/lib/ant-contrib-1.0b3.jar"/>
+			<pathelement location="plugins/org.dita-semia.diff/lib/ant-contrib-1.0b3.jar"/>
 		</classpath>
 	</taskdef>
 	
