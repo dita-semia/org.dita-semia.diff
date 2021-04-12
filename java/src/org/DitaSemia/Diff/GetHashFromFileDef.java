@@ -11,7 +11,7 @@ public class GetHashFromFileDef extends ExtensionFunctionDefinition {
 
 	@Override
 		public SequenceType[] getArgumentTypes() {
-			SequenceType[] sequenceType = {SequenceType.SINGLE_STRING};
+			SequenceType[] sequenceType = {SequenceType.SINGLE_STRING, SequenceType.SINGLE_BOOLEAN};
 			return sequenceType;
 	}
 

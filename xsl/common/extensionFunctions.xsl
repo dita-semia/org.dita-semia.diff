@@ -19,7 +19,8 @@
 	</xsl:function>
 	
 	<xsl:function name="dsd:getHashFromFile" as="xs:integer" use-when="not(function-available('dsd:getHashFromFile'))">
-		<xsl:param name="url" as="xs:anyURI"/>
+		<xsl:param name="url" 			as="xs:anyURI"/>
+		<xsl:param name="normalizeNl" 	as="xs:boolean"/>
 		<xsl:sequence select="0"/>
 	</xsl:function>
 	

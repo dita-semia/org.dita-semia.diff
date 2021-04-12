@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <topic xmlns:cba="http://www.dita-semia.org/conbat" xmlns:xcr="http://www.dita-semia.org/xslt-conref" xmlns:ikd="http://www.dita-semia.org/implicit-keydef"
 	xmlns:akr="http://www.dita-semia.org/advanced-keyref" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:topic.xsd" id="e1q_wm2_sbb">
-	<title>Child Two</title>
+	<title>Child Three</title>
 	<body>
 		<p id="D3H-YM2-SBB">Text Text Text</p>
-		<codeblock>only whitespace 
-   changes</codeblock>
-		<p id="QKZ-V3T-WLB">XML-Codeblock</p>
-		<codeblock outputclass="language-xml">&lt;RootElement>
-  &lt;Changed>Some text content without any changes&lt;/Changed>
-  &lt;Unchanged>Some text content without any changes&lt;/Unchanged>
-  &lt;Unchanged>Some text content without any changes&lt;/Unchanged>
-  &lt;Added>123&lt;/Added>
-&lt;/RootElement></codeblock>
+		<fig id="T3K-54L-G3B">
+			<image href="../img-old/dita-logo-old.png" id="WRC-V4L-G3B"/>
+		</fig>
 	</body>
 </topic>

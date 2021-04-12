@@ -31,7 +31,7 @@
 				</xsl:when>
 				<xsl:when test="exists(@xtrc) and (@xtrf ne parent::*/@xtrf) and not(contains(@class, ' map/topicref ') or contains(@class, ' topic/link '))">
 					<xsl:variable name="relUri" as="xs:string" select="dsd:relativizeHref(@xtrf, parent::*/@xtrf)"/>
-					<xsl:variable name="absUri" as="xs:anyURI" select="resolve-uri($relUri, base-uri(.))"/>
+					<xsl:variable name="absUri" as="xs:anyURI" select="resolve-uri($relUri, dsd:base-uri(.))"/>
 					<!--<xsl:message>XXXXXXXXXXXXXXXXXX {$absUri}</xsl:message>-->
 					<!--<xsl:message>XXXXXXXXXXXXXX conref - {@class}, {@xtrc}, {$absUri}</xsl:message>-->
 					<!-- conref started -->
@@ -52,9 +52,9 @@
 		<xsl:copy>
 			<xsl:if test="(parent::document-node()) or ($setBaseUri)">
 				<xsl:if test="parent::document-node()">
-					<xsl:message>Normalizing {base-uri()}</xsl:message>
+					<xsl:message>Normalizing {dsd:base-uri(.)}</xsl:message>
 				</xsl:if>
-				<xsl:attribute name="xml:base" select="base-uri()"/>	
+				<xsl:attribute name="xml:base" select="dsd:base-uri(.)"/>	
 			</xsl:if>
 			
 			<xsl:variable name="contentWrapper" as="element()">
@@ -94,7 +94,7 @@
 							<xsl:variable name="normalizedRef" as="document-node()?">
 								<!-- integrate referenced topic unless within a reltable -->
 								<xsl:if test="(contains(@class, $CLASS_TOPICREF)) and (not(ancestor::*[contains(@class, $CLASS_RELTABLE)])) and (string(@href) != '')">
-									<xsl:variable name="refUri" as="xs:anyURI" 			select="resolve-uri(@href, base-uri(.))"/>
+									<xsl:variable name="refUri" as="xs:anyURI" 			select="resolve-uri(@href, dsd:base-uri(.))"/>
 									<xsl:choose>
 										<xsl:when test="doc-available($refUri)">
 											<xsl:apply-templates select="doc($refUri)" mode="normalize"/>
@@ -146,8 +146,10 @@
 		<xsl:copy/> 
 
 		<!-- add another attribute for the hash of the referenced file -->
-		<xsl:variable name="refUri" as="xs:anyURI" select="if (parent::*/@xtrf) then resolve-uri(., parent::*/@xtrf) else resolve-uri(., base-uri())"/>
-		<xsl:attribute name="dsd:refHashCode" select="dsd:getHashFromFile($refUri)"/>
+		<xsl:variable name="refUri" 		as="xs:anyURI" 	select="if (parent::*/@xtrf) then resolve-uri(., parent::*/@xtrf) else resolve-uri(., dsd:base-uri(.))"/>
+		<xsl:variable name="isXmlFormat"	as="xs:boolean"	select="ends-with($refUri, '.svg')"/>
+		<xsl:variable name="hashCode"		as="xs:integer"	select="dsd:getHashFromFile($refUri, $isXmlFormat)"/>
+		<xsl:attribute name="dsd:refHashCode" select="$hashCode"/>
 	</xsl:template>
 	
 	

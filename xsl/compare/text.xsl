@@ -23,6 +23,7 @@
 		</xsl:if>
 		<xsl:next-match/>-->
 		<dsd:text>
+			<xsl:attribute name="xml:base"		select="dsd:base-uri(.)"/>	<!-- required when resolving embedded href-attributes -->
 			<xsl:attribute name="dsd:hash" 		select="dsd:getHashFromString(' ')"/>
 			<xsl:attribute name="dsd:size" 		select="1"/>
 			<xsl:attribute name="dsd:mergeCode" select="0"/>
@@ -34,28 +35,36 @@
 	<xsl:template match="text()" mode="splitText">
 		<!--
 			Allowed groups:
-				- combination of letters, digits and underscore 
+				- XML-tag (combination of letters, digits, underscore and minus in angular brackets with optional slash before or after)
+				- combination of letters, digits and underscore
 				- any whitespace sequence
 				- single punctuation character 
 		-->
-		<xsl:variable name="words" as="xs:string*">
-			<xsl:analyze-string select="." regex="[\p{{L}}\p{{N}}_]+|[\s]+|[\p{{P}}]" flags="m">
-				<xsl:matching-substring>
-					<xsl:sequence select="."/>
-				</xsl:matching-substring>
-				<xsl:non-matching-substring>
-					<xsl:sequence select="."/>
-				</xsl:non-matching-substring>
-			</xsl:analyze-string>
-		</xsl:variable>
-		<xsl:for-each select="$words">
-			<dsd:text>
-				<xsl:attribute name="dsd:hash" 		select="dsd:getHashFromString(.)"/>
-				<xsl:attribute name="dsd:size" 		select="string-length(.)"/>
-				<xsl:attribute name="dsd:mergeCode" select="0"/>
-				<xsl:sequence select="."/>
-			</dsd:text>
-		</xsl:for-each>
+		<xsl:variable name="context" as="node()" select="parent::node()"/>
+		<xsl:analyze-string select="." regex="(&lt;/?[\p{{L}}\p{{N}}_-]+/?&gt;)|([\p{{L}}\p{{N}}_]+)|([\s]+)|([\p{{P}}])" flags="m">
+			<xsl:matching-substring>
+				<xsl:call-template name="SplitTextFromContext">
+					<xsl:with-param name="atomic" select="exists(regex-group(1)) and ($context/ancestor::*/@outputclass = 'language-xml')"/>
+				</xsl:call-template>
+			</xsl:matching-substring>
+			<xsl:non-matching-substring>
+				
+			</xsl:non-matching-substring>
+		</xsl:analyze-string>
+	</xsl:template>
+	
+	<xsl:template name="SplitTextFromContext">
+		<xsl:param name="atomic" as="xs:boolean" select="false()"/>
+		
+		<dsd:text>
+			<xsl:attribute name="dsd:hash" 		select="dsd:getHashFromString(.)"/>
+			<xsl:attribute name="dsd:size" 		select="string-length(.)"/>
+			<xsl:attribute name="dsd:mergeCode" select="0"/>
+			<!--<xsl:if test="$atomic">-->
+				<xsl:attribute name="dsd:atomic"/>
+			<!--</xsl:if>-->
+			<xsl:sequence select="."/>
+		</dsd:text>
 	</xsl:template>
 	
 	<xsl:template match="processing-instruction() | comment()" mode="splitText">
@@ -343,5 +352,6 @@
 			</xsl:analyze-string>
 		</xsl:document>
 	</xsl:template>
+	
 
 </xsl:stylesheet>

@@ -13,6 +13,7 @@
 
 
 	<xsl:include href="common/consts.xsl"/>
+	<xsl:include href="common/base-uri.xsl"/>
 	<xsl:include href="common/getHashSize.xsl"/>
 	<xsl:include href="common/extensionFunctions.xsl"/>
 	<xsl:include href="normalize/normalize-core.xsl"/>

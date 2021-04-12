@@ -5,5 +5,12 @@
 	<body>
 		<p id="D3H-YM2-SBB">Text Text Text</p>
 		<codeblock>only    whitespace changes</codeblock>
+		<p id="QKZ-V3T-WLB">XML-Codeblock</p>
+		<codeblock outputclass="language-xml">&lt;RootElement>
+  &lt;changed>Some text content without any changes&lt;/changed>
+  &lt;Unchanged>Some text content without any changes&lt;/Unchanged>
+  &lt;Deleted>123&lt;/Deleted>
+  &lt;Unchanged>Some text content without any changes&lt;/Unchanged>
+&lt;/RootElement></codeblock>
 	</body>
 </topic>

@@ -25,6 +25,7 @@
 
 
 	<xsl:include href="common/consts.xsl"/>
+	<xsl:include href="common/base-uri.xsl"/>
 	<xsl:include href="common/getHashSize.xsl"/>
 	<xsl:include href="common/extensionFunctions.xsl"/>
 	<xsl:include href="compare/lcs.xsl"/>
@@ -43,7 +44,7 @@
 		<xsl:call-template name="compareDoc">
 			<xsl:with-param name="doc1"					select="."/>
 			<xsl:with-param name="doc2Uri"				select="xs:anyURI($prevUriNormalized)"/>
-			<xsl:with-param name="outputUri"			select="xs:anyURI(concat(base-uri(.), $tmpUriSuffix))"/>
+			<xsl:with-param name="outputUri"			select="xs:anyURI(concat(dsd:base-uri(.), $tmpUriSuffix))"/>
 			<xsl:with-param name="isRoot"				select="true()"/>
 			<xsl:with-param name="doSingleWordCompare"	select="$doSingleWordCompare" 						tunnel="yes"/>
 			<xsl:with-param name="relevantTextClasses"	select="tokenize($relevantTextClasses, '[,\s]+')" 	tunnel="yes"/>
@@ -66,7 +67,7 @@
 				<xsl:message terminate="yes">ERROR: file to compare with could not be loaded: {$doc2Uri}</xsl:message>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:message>Comparing file {base-uri($doc1)} with {$doc2Uri} ...</xsl:message>
+				<xsl:message>Comparing file {dsd:base-uri($doc1)} with {$doc2Uri} ...</xsl:message>
 				<xsl:variable name="result" as="document-node()">
 					<xsl:apply-templates select="$doc1" mode="processMatch">
 						<xsl:with-param name="matchNode" 				select="$doc2"/>
@@ -124,13 +125,13 @@
 				<!--<xsl:message>compareContent on {name($parent1)} ({$isTextMode}): p1-text: {$parent1/@dsd:text}, p2-text: {$parent2/@dsd:text}</xsl:message>-->	
 				<xsl:variable name="textParent1" as="element()">
 					<dsd:textParent>
-						<xsl:attribute name="xml:base" select="base-uri($parent1)"/>
+						<xsl:attribute name="xml:base" select="dsd:base-uri($parent1)"/>
 						<xsl:apply-templates select="$parent1/node()" mode="splitText"/>
 					</dsd:textParent>
 				</xsl:variable>
 				<xsl:variable name="textParent2" as="element()">
 					<dsd:textParent>
-						<xsl:attribute name="xml:base" select="base-uri($parent2)"/>
+						<xsl:attribute name="xml:base" select="dsd:base-uri($parent2)"/>
 						<xsl:apply-templates select="$parent2/node()" mode="splitText"/>
 					</dsd:textParent>
 				</xsl:variable>
@@ -269,7 +270,7 @@
 				<xsl:apply-templates select="$added[not(self::text())]" 	mode="added"/>
 				<xsl:apply-templates select="$deleted[not(self::text())]" 	mode="deleted"/>		
 			</xsl:when>
-			<xsl:when test="($doSingleWordCompare) and (count($added) = 1) and (count($deleted) = 1)">
+			<xsl:when test="($doSingleWordCompare) and (count($added) = 1) and (count($deleted) = 1) and not($added/@dsd:atomic) and not($deleted/@dsd:atomic)">
 				<xsl:call-template name="singleWordCompare">
 					<xsl:with-param name="added"	select="$added"/>
 					<xsl:with-param name="deleted"	select="$deleted"/>

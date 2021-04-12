@@ -2,4 +2,20 @@
 <map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:oasis:names:tc:dita:xsd:map.xsd">
 	<topicref href="childmap/child-2-1.dita" product="P1 P2"/>
 	<topicref href="childmap/child-2-2.dita" product="P3"/>
+	<topicref href="childmap/child-2-3.dita"/>
+	<reltable>
+		<relheader>
+			<relcolspec type="concept"/>
+			<relcolspec type="task"/>
+		</relheader>
+		<relrow>
+			<relcell>
+				<topicref href="childmap/child-2-3.dita"/>
+			</relcell>
+			<relcell>
+				<topicref href="childmap/child-2-1.dita" product="P1 P2"/>
+				<topicref href="childmap/child-2-2.dita" product="P3"/>
+			</relcell>
+		</relrow>
+	</reltable>
 </map>

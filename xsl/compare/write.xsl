@@ -104,7 +104,7 @@
 		</xsl:next-match>
 		
 		<!--<xsl:message>href: {@href}, base-uri: {ancestor-or-self::*/@xml:base}</xsl:message>-->
-		<xsl:variable name="refUri"	as="xs:anyURI" 			select="resolve-uri(@href, base-uri(.))"/>
+		<xsl:variable name="refUri"	as="xs:anyURI" 			select="resolve-uri(@href, dsd:base-uri(.))"/>
 		<xsl:variable name="refDoc"	as="document-node()?" 	select="if (doc-available($refUri)) then doc($refUri) else()"/>
 		<xsl:variable name="dstUri"	as="xs:anyURI" 			select="xs:anyURI(concat($refUri, $tmpUriSuffix))"/>
 		
@@ -126,7 +126,7 @@
 										<xsl:with-param name="outputUri" select="$dstUri"/>
 									</xsl:apply-templates>
 									<xsl:if test="empty(@xml:base)">
-										<xsl:attribute name="xml:base" select="base-uri(.)"/>
+										<xsl:attribute name="xml:base" select="dsd:base-uri(.)"/>
 									</xsl:if>
 									<!--<xsl:variable name="markedContent" as="node()*">
 										<xsl:choose>
@@ -184,8 +184,8 @@
 		<xsl:choose>
 			<xsl:when test="(ancestor-or-self::*/@dsd:change = $CHANGE_DELETED) or $isDeleted">
 				<!-- ensure absolute URI beacuse relative URLs will be resolved based on the original URL which would not work here -->
-				<xsl:attribute name="href" select="resolve-uri(., base-uri(.))"/>
-				<!--<xsl:message>deleted image href resolved to: <xsl:value-of select="resolve-uri(., base-uri(.))"/></xsl:message>-->
+				<xsl:attribute name="href" select="resolve-uri(., dsd:base-uri(.))"/>
+				<!--<xsl:message>deleted image href resolved to: <xsl:value-of select="resolve-uri(., dsd:base-uri(.))"/></xsl:message>-->
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:next-match>
@@ -237,7 +237,7 @@
 				
 				<!-- if the href links to an old topic that has been merged with a new one redirect to new topic -->
 				<xsl:variable name="refMatch" 	as="element()?" select="key($KEY_MATCH_HREF, $hrefParts[1], $rootResult)[1]"/>
-				<xsl:variable name="fixedHref"	as="xs:string"	select="if ($refMatch) then string-join((resolve-uri($refMatch/@href, base-uri($refMatch)), $hrefParts[2]), '#') else $href"/>
+				<xsl:variable name="fixedHref"	as="xs:string"	select="if ($refMatch) then string-join((resolve-uri($refMatch/@href, dsd:base-uri($refMatch)), $hrefParts[2]), '#') else $href"/>
 				
 				<xsl:sequence select="$fixedHref"/>
 			</xsl:when>

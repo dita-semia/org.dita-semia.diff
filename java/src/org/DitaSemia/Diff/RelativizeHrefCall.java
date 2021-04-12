@@ -1,6 +1,7 @@
 package org.DitaSemia.Diff;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -17,19 +18,21 @@ public class RelativizeHrefCall extends ExtensionFunctionCall {
 	
 	@Override
 	public Sequence call(XPathContext context, Sequence[] arguments) throws XPathException {
+		String href	= "";
+		String base = "";
 		try {
 
-			final String href	= arguments[0].head().getStringValue().replace('\\', '/');
-			final String base 	= arguments[1].head().getStringValue().replace('\\', '/');
-		
+			href	= arguments[0].head().getStringValue().replace('\\', '/');
+			base 	= arguments[1].head().getStringValue().replace('\\', '/');
+
 			return StringValue.makeStringValue(relativize(href, base)).asAtomic();
 			
 		} catch (Exception e) {
-			throw new XPathException("ERROR in dsd:relativizeUri(): " + e.getMessage());
+			throw new XPathException("ERROR in dsd:relativizeHref(" + href + ", " + base + "): " + e.getMessage());
 		}
 	}
 
-	public static String relativize(String href, String base) throws URISyntaxException, MalformedURLException {
+	public static String relativize(String href, String base) throws URISyntaxException, MalformedURLException, UnsupportedEncodingException {
 		
 		final URI 	hrefUri 	= new URI(href);
 		final URI	baseUri 	= new URI(base);

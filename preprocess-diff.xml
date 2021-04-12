@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
 	
+	<scriptdef name="makepath" language="javascript">
+		<attribute name="url"/>
+		<attribute name="property"/>
+		<![CDATA[
+			var decodedUrl = decodeURIComponent(attributes.get("url"));
+			var path = decodedUrl.replace(/^[^:]+:\/+/g, "");
+			self.project.setProperty( attributes.get("property"), path )
+	    ]]>
+	</scriptdef>
+	
 	<target name="dita-semia.preprocess.diff" depends="dita-semia.preprocess.diff.init">
 	
 		<echo message="dita-semia.diff-prev-url: ${dita-semia.diff-prev-url}"/>
@@ -123,7 +133,8 @@
 
 				<!-- unzip prev file -->
 				<property name="prev.temp.dir" value="${dita.temp.dir}${file.separator}dita-semia.diff-prev"/>
-				<propertyregex property="diff-prev-file" input="${dita-semia.diff-prev-url}" regexp="^(file:)?" replace=""/>
+				<!--<propertyregex property="diff-prev-file" input="${dita-semia.diff-prev-url}" regexp="^(file:)?" replace=""/>-->
+				<makepath url="${dita-semia.diff-prev-url}" property="diff-prev-file"/>
 				<unzip src="${diff-prev-file}" dest="${prev.temp.dir}"/>
 
 				<loadfile property="dita-semia.diff.prev.root.filename" srcFile="${prev.temp.dir}${file.separator}user.input.file.list"/>

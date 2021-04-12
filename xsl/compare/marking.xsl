@@ -99,6 +99,8 @@
 	<xsl:template match="@href" mode="added addedContent deleted deletedContent">
 		<xsl:attribute name="href" select="dsd:getResolvedHref(.)"/>
 		<!--<xsl:message>dsd:getResolvedHref({.}) to {dsd:getResolvedHref(.)}</xsl:message>-->
+		<!--<xsl:message select="ancestor::*[last()]"></xsl:message>
+		<xsl:message> </xsl:message>-->
 	</xsl:template>
 		
 	
@@ -107,7 +109,7 @@
 
 	<xsl:template match="/*" mode="unchanged">
 		<xsl:copy>
-			<xsl:attribute name="xml:base" select="base-uri(.)"/>
+			<xsl:attribute name="xml:base" select="dsd:base-uri(.)"/>
 			<xsl:apply-templates select="attribute() | node()" mode="#current"/>
 		</xsl:copy>
 	</xsl:template>
@@ -137,13 +139,14 @@
 	<xsl:function name="dsd:getResolvedHref" as="xs:string?">
 		<xsl:param name="href" as="attribute()?"/>
 		
+		<xsl:variable name="baseUri" as="xs:anyURI?"	select="dsd:base-uri($href)"/>
 		<xsl:choose>
 			<xsl:when test="empty($href)"/>
 			<xsl:when test="starts-with($href, '#')">
-				<xsl:value-of select="concat(base-uri($href), $href)"/>
+				<xsl:value-of select="concat($baseUri, $href)"/>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="resolve-uri($href, base-uri($href))"/>		
+				<xsl:value-of select="resolve-uri($href, $baseUri)"/>		
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
